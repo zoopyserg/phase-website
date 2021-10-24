@@ -20,4 +20,8 @@ export class SelectedimagesectionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  imgSrc(): string {
+    return "assets/images/objects/" + this.imageNames[this.selectedImageIndex].filename;
+  }
+
 }

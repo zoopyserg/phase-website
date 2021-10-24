@@ -16,7 +16,7 @@
   </div>
   <div class="card-body">
     <input type="hidden" id="displayImageAddressInput" value="../assets/img/objects/forest.jpg"/>
-    <img id="displayedObjectImage" class="w-100" src="../assets/img/objects/forest.jpg">
+    <img id="displayedObjectImage" class="w-100" [src]="imgSrc()">
     <div>{{ detalizationProperty.value }}</div>
     <div>{{ panoramityProperty.value }}</div>
     <div>{{ wishToChangeProperty.value }}</div>
