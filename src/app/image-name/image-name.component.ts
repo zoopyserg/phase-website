@@ -20,4 +20,8 @@ export class ImageNameComponent implements OnInit {
     this.onSelectedChange.emit(this.currentImageIndex)
   }
 
+  isChecked(): boolean {
+    return this.selectedImageIndex == this.currentImageIndex
+  }
+
 }
