@@ -7,6 +7,7 @@ import {PropertySliderComponent} from "../property-slider/property-slider.compon
   templateUrl: './slidepropertiessection.component.html',
   styleUrls: ['./slidepropertiessection.component.scss']
 })
+
 export class SlidepropertiessectionComponent implements OnInit {
   @Input() detalizationProperty: any
   @Input() panoramityProperty: any

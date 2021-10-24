@@ -8,7 +8,11 @@
             <app-trainingvideosection></app-trainingvideosection>
           </div>
           <div class="col-lg-5">
-            <app-chartsection></app-chartsection>
+            <app-chartsection
+              [detalizationProperty]="detalizationProperty"
+              [panoramityProperty]="panoramityProperty"
+              [wishToChangeProperty]="wishToChangeProperty"
+            ></app-chartsection>
           </div>
         </div>
         <div class="row">
@@ -17,10 +21,16 @@
               [detalizationProperty]="detalizationProperty"
               [panoramityProperty]="panoramityProperty"
               [wishToChangeProperty]="wishToChangeProperty"
+              [imageNames]="imageNames"
+              [selectedImageIndex]="selectedImageIndex"
             ></app-selectedimagesection>
           </div>
           <div class="col-lg-5 col-xl-4">
-            <app-selectpicturesection></app-selectpicturesection>
+            <app-selectpicturesection
+              [imageNames]="imageNames"
+              [selectedImageIndex]="selectedImageIndex"
+              (onSelectedChange)="setSelectedChange($event)"
+            ></app-selectpicturesection>
             <app-slidepropertiessection
               [detalizationProperty]="detalizationProperty"
               [panoramityProperty]="panoramityProperty"

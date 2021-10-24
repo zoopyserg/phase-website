@@ -9,8 +9,11 @@ export class SelectedimagesectionComponent implements OnInit {
   @Input() detalizationProperty: any
   @Input() panoramityProperty: any
   @Input() wishToChangeProperty: any
+  @Input() imageNames: any
+  @Input() selectedImageIndex: any
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

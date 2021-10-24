@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {PhaseProperty} from "../app.component";
 
 @Component({
   selector: 'app-property-slider',

@@ -12,6 +12,7 @@ import { ChartsectionComponent } from './chartsection/chartsection.component';
 import { SelectedimagesectionComponent } from './selectedimagesection/selectedimagesection.component';
 import { PropertySliderComponent } from './property-slider/property-slider.component';
 import { FormsModule } from "@angular/forms";
+import { ImageNameComponent } from './image-name/image-name.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule } from "@angular/forms";
     TrainingvideosectionComponent,
     ChartsectionComponent,
     SelectedimagesectionComponent,
-    PropertySliderComponent
+    PropertySliderComponent,
+    ImageNameComponent
   ],
   imports: [
     BrowserModule,
