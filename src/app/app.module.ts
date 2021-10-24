@@ -2,10 +2,26 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { SlidepropertiessectionComponent } from './slidepropertiessection/slidepropertiessection.component';
+import { SelectpicturesectionComponent } from './selectpicturesection/selectpicturesection.component';
+import { SelecttechniquesectionComponent } from './selecttechniquesection/selecttechniquesection.component';
+import { TrainingvideosectionComponent } from './trainingvideosection/trainingvideosection.component';
+import { ChartsectionComponent } from './chartsection/chartsection.component';
+import { SelectedimagesectionComponent } from './selectedimagesection/selectedimagesection.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FooterComponent,
+    HeaderComponent,
+    SlidepropertiessectionComponent,
+    SelectpicturesectionComponent,
+    SelecttechniquesectionComponent,
+    TrainingvideosectionComponent,
+    ChartsectionComponent,
+    SelectedimagesectionComponent
   ],
   imports: [
     BrowserModule
