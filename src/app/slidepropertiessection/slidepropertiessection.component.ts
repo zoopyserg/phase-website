@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {PhaseProperty} from "../app.component";
 import {PropertySliderComponent} from "../property-slider/property-slider.component";
 
@@ -8,13 +8,12 @@ import {PropertySliderComponent} from "../property-slider/property-slider.compon
   styleUrls: ['./slidepropertiessection.component.scss']
 })
 export class SlidepropertiessectionComponent implements OnInit {
+  @Input() detalizationProperty: any
+  @Input() panoramityProperty: any
+  @Input() wishToChangeProperty: any
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  detalizationProperty: PhaseProperty = {name: "Детализация", value: 50}
-  panoramityProperty: PhaseProperty = {name: "Панорамность", value: 50}
-  wishToChangeProperty: PhaseProperty = {name: "Желание Изменить Картинку", value: 50}
 }

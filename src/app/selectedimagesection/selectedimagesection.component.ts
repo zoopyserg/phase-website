@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-selectedimagesection',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./selectedimagesection.component.scss']
 })
 export class SelectedimagesectionComponent implements OnInit {
+  @Input() detalizationProperty: any
+  @Input() panoramityProperty: any
+  @Input() wishToChangeProperty: any
 
   constructor() { }
 

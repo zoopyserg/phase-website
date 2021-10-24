@@ -13,11 +13,19 @@
         </div>
         <div class="row">
           <div class="col-lg-7 col-xl-8">
-            <app-selectedimagesection></app-selectedimagesection>
+            <app-selectedimagesection
+              [detalizationProperty]="detalizationProperty"
+              [panoramityProperty]="panoramityProperty"
+              [wishToChangeProperty]="wishToChangeProperty"
+            ></app-selectedimagesection>
           </div>
           <div class="col-lg-5 col-xl-4">
             <app-selectpicturesection></app-selectpicturesection>
-            <app-slidepropertiessection></app-slidepropertiessection>
+            <app-slidepropertiessection
+              [detalizationProperty]="detalizationProperty"
+              [panoramityProperty]="panoramityProperty"
+              [wishToChangeProperty]="wishToChangeProperty"
+            ></app-slidepropertiessection>
           </div>
         </div>
         <div class="row">
