@@ -1,0 +1,4 @@
+<div class="slidecontainer">
+  <h4 class="small fw-bold">{{ phaseProperty.name }}<span class="float-end">{{ valuePercentage() }}</span></h4>
+  <input class="form-range" [(ngModel)]="phaseProperty.value" (ngModelChange)="propertyChangedHandler()" type="range" min="0" max="100" step="1">
+</div>

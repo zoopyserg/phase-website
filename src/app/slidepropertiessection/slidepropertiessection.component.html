@@ -4,14 +4,9 @@
       <h6 class="text-primary fw-bold m-0">Компоненты</h6>
     </div>
     <div class="card-body">
-      <h4 class="small fw-bold">Панорамность<span class="float-end" id="panoramityPercentage">20%</span></h4>
-      <div class="slidecontainer">
-        <input class="form-range" type="range" id="panoramitySlider" min="0" max="100" step="1" value="50" name="panoramitySlider">
-      </div>
-      <h4 class="small fw-bold">Детализация<span class="float-end" id="detalizationPercentage">40%</span></h4>
-      <input class="form-range" type="range" id="detalizationSlider" min="0" max="100" step="1" value="50" name="detalizationSlider">
-      <h4 class="small fw-bold">Желание Изменить Картинку<span class="float-end" id="desireToChangePercentage">60%</span></h4>
-      <input class="form-range" type="range" id="desireToChangeSlider" min="0" max="100" step="1" value="50" name="desireToChangeSlider">
+      <app-property-slider [phaseProperty]="detalizationProperty"></app-property-slider>
+      <app-property-slider [phaseProperty]="panoramityProperty"></app-property-slider>
+      <app-property-slider [phaseProperty]="wishToChangeProperty"></app-property-slider>
     </div>
   </div>
 </div>

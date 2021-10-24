@@ -10,6 +10,8 @@ import { SelecttechniquesectionComponent } from './selecttechniquesection/select
 import { TrainingvideosectionComponent } from './trainingvideosection/trainingvideosection.component';
 import { ChartsectionComponent } from './chartsection/chartsection.component';
 import { SelectedimagesectionComponent } from './selectedimagesection/selectedimagesection.component';
+import { PropertySliderComponent } from './property-slider/property-slider.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -21,10 +23,12 @@ import { SelectedimagesectionComponent } from './selectedimagesection/selectedim
     SelecttechniquesectionComponent,
     TrainingvideosectionComponent,
     ChartsectionComponent,
-    SelectedimagesectionComponent
+    SelectedimagesectionComponent,
+    PropertySliderComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
