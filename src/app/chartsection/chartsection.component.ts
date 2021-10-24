@@ -9,6 +9,10 @@ export class ChartsectionComponent implements OnInit {
   @Input() detalizationProperty: any
   @Input() panoramityProperty: any
   @Input() wishToChangeProperty: any
+  @Input() imageNames: any
+  @Input() selectedImageIndex: any
+  @Input() techniques: any
+  @Input() selectedTechniqueIndex: any
 
   constructor() { }
 

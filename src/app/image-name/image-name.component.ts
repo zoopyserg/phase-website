@@ -9,15 +9,15 @@ export class ImageNameComponent implements OnInit {
   @Input() imageName: any
   @Input() currentImageIndex: any
   @Input() selectedImageIndex: any
-  @Output() onSelectedChange = new EventEmitter<number>();
+  @Output() onSelectedImageChange = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  setSelectedChange() {
-    this.onSelectedChange.emit(this.currentImageIndex)
+  setSelectedImageChange() {
+    this.onSelectedImageChange.emit(this.currentImageIndex)
   }
 
   isChecked(): boolean {

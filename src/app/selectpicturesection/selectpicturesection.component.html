@@ -3,6 +3,6 @@
     <h6 class="text-primary fw-bold m-0">Выбрать Картинку</h6>
   </div>
   <ul class="list-group list-group-flush">
-    <app-image-name *ngFor="let imageName of imageNames; let i = index" [imageName]="imageName" [selectedImageIndex]="selectedImageIndex" [currentImageIndex]="i" (onSelectedChange)="setSelectedChange($event)"></app-image-name>
+    <app-image-name *ngFor="let imageName of imageNames; let i = index" [imageName]="imageName" [selectedImageIndex]="selectedImageIndex" [currentImageIndex]="i" (onSelectedImageChange)="setSelectedImageChange($event)"></app-image-name>
   </ul>
 </div>

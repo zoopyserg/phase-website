@@ -12,6 +12,10 @@
               [detalizationProperty]="detalizationProperty"
               [panoramityProperty]="panoramityProperty"
               [wishToChangeProperty]="wishToChangeProperty"
+              [imageNames]="imageNames"
+              [selectedImageIndex]="selectedImageIndex"
+              [techniques]="techniques"
+              [selectedTechniqueIndex]="selectedTechniqueIndex"
             ></app-chartsection>
           </div>
         </div>
@@ -23,13 +27,15 @@
               [wishToChangeProperty]="wishToChangeProperty"
               [imageNames]="imageNames"
               [selectedImageIndex]="selectedImageIndex"
+              [techniques]="techniques"
+              [selectedTechniqueIndex]="selectedTechniqueIndex"
             ></app-selectedimagesection>
           </div>
           <div class="col-lg-5 col-xl-4">
             <app-selectpicturesection
               [imageNames]="imageNames"
               [selectedImageIndex]="selectedImageIndex"
-              (onSelectedChange)="setSelectedChange($event)"
+              (onSelectedImageChange)="setSelectedImage($event)"
             ></app-selectpicturesection>
             <app-slidepropertiessection
               [detalizationProperty]="detalizationProperty"
@@ -40,7 +46,11 @@
         </div>
         <div class="row">
           <div class="col-lg-12 mb-4">
-            <app-selecttechniquesection></app-selecttechniquesection>
+            <app-selecttechniquesection
+              [techniques]="techniques"
+              [selectedTechniqueIndex]="selectedTechniqueIndex"
+              (onSelectedTechniqueChange)="setSelectedTechnique($event)"
+            ></app-selecttechniquesection>
           </div>
         </div>
       </div>

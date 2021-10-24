@@ -8,7 +8,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 export class SelectpicturesectionComponent implements OnInit {
   @Input() imageNames: any
   @Input() selectedImageIndex: any
-  @Output() onSelectedChange = new EventEmitter<number>();
+  @Output() onSelectedImageChange = new EventEmitter<number>();
 
   constructor() {
   }
@@ -16,8 +16,8 @@ export class SelectpicturesectionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  setSelectedChange(val: number) {
-    this.onSelectedChange.emit(val)
+  setSelectedImageChange(val: number) {
+    this.onSelectedImageChange.emit(val)
   }
 
 }

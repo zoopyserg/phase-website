@@ -11,6 +11,8 @@ export class SelectedimagesectionComponent implements OnInit {
   @Input() wishToChangeProperty: any
   @Input() imageNames: any
   @Input() selectedImageIndex: any
+  @Input() techniques: any
+  @Input() selectedTechniqueIndex: any
 
   constructor() {
   }

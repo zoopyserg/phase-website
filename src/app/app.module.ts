@@ -13,6 +13,7 @@ import { SelectedimagesectionComponent } from './selectedimagesection/selectedim
 import { PropertySliderComponent } from './property-slider/property-slider.component';
 import { FormsModule } from "@angular/forms";
 import { ImageNameComponent } from './image-name/image-name.component';
+import { TechniqueNameComponent } from './technique-name/technique-name.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ImageNameComponent } from './image-name/image-name.component';
     ChartsectionComponent,
     SelectedimagesectionComponent,
     PropertySliderComponent,
-    ImageNameComponent
+    ImageNameComponent,
+    TechniqueNameComponent
   ],
   imports: [
     BrowserModule,

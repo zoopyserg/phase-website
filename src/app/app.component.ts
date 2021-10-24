@@ -5,9 +5,14 @@ export interface PhaseProperty {
   value: number
 }
 
-export  interface ImageName {
+export interface ImageName {
   name: string
   filename: string
+}
+
+export interface Technique {
+  name: string
+  description: string
 }
 
 @Component({
@@ -35,8 +40,21 @@ export class AppComponent {
 
   selectedImageIndex: number = 0
 
-  setSelectedChange(val: number) {
+  setSelectedImage(val: number) {
     this.selectedImageIndex = val
+  }
+
+  techniques: Technique[] = [
+    { name: "Сенсоризация", description: "Ощупывание + Рассматривание вблизи" },
+    { name: "Рассматривание Деталей", description: "" },
+    { name: "Изменение Ракурса", description: "" },
+    { name: "Поднимать предметы и называть их", description: "" },
+  ]
+
+  selectedTechniqueIndex: number = 0
+
+  setSelectedTechnique(val: number) {
+    this.selectedTechniqueIndex = val
   }
 
 }
