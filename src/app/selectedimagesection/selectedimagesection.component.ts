@@ -68,12 +68,28 @@ export class SelectedimagesectionComponent implements AfterViewInit {
     var canvasElement = this.canvasElement
     var contrast = 2 * this._detalizationPropertyValue - 100 // turning range from -100..100 to 0..100 (using y=2x-100 formula)
     var darkness = Math.max(0, - this._detalizationPropertyValue / 40 + 1) // y=-x/40+1 for darkness alpha intensity, set to 0 if y < 0
+    var parnoramityValue = this._panoramityPropertyValue
 
     image.addEventListener('load', function(){
       canvasElement.width = image.width
       canvasElement.height = image.height
 
-      context.drawImage(image, 0, 0);
+      var receivedWidth = Math.round(image.width * parnoramityValue / 100)
+      var receivedHeight = Math.round(image.height * parnoramityValue / 100)
+      var halfReceivedWidth = Math.round(receivedWidth / 2)
+      var halfReceivedHeight = Math.round(receivedHeight / 2)
+      var centerPositionX = Math.round(image.width / 2)
+      var centerPositionY = Math.round(image.height / 2)
+      var startXSource = centerPositionX - halfReceivedWidth
+      //var endXSource = centerPositionX + halfReceivedWidth
+      var startYSource = centerPositionY - halfReceivedHeight
+      //var endYSource = centerPositionY + halfReceivedHeight
+      var startXDestination = startXSource
+      var startYDestination = startYSource
+      var destinationWidth = receivedWidth
+      var destinationHeight = receivedHeight
+
+      context.drawImage(image, startXSource, startYSource, receivedWidth, receivedHeight, startXDestination, startYDestination, destinationWidth, destinationHeight);
 
       //contrast
       var imageData = context.getImageData(0,0, image.width, image.height)
@@ -93,7 +109,7 @@ export class SelectedimagesectionComponent implements AfterViewInit {
       context.fillStyle = "black"
       context.fillRect(0, 0, context.canvas.width, context.canvas.height)
       // cropping
-      var receivedWidth = image.width
+
 
 
     });
