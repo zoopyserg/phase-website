@@ -13,6 +13,7 @@ export class SlidepropertiessectionComponent implements OnInit {
   @Input() panoramityProperty: any
   @Input() wishToChangeProperty: any
   @Output() onDetalizationPropertyChanged = new EventEmitter<number>();
+  @Output() onPanoramityPropertyChanged = new EventEmitter<number>();
 
   constructor() { }
 
@@ -21,5 +22,9 @@ export class SlidepropertiessectionComponent implements OnInit {
 
   setDetalizationValue(event: any) {
     this.onDetalizationPropertyChanged.emit(event)
+  }
+
+  setPanoramityValue(event: any) {
+    this.onPanoramityPropertyChanged.emit(event)
   }
 }

@@ -58,10 +58,16 @@ export class AppComponent {
   }
 
   detalizationPropertyValue: number = 50;
+  panoramityPropertyValue: number = 50;
 
   setDetalizationValue(val: number) {
     this.detalizationProperty.value = val
     this.detalizationPropertyValue = val
+  }
+
+  setPanoramityValue(val: number) {
+    this.panoramityProperty.value = val
+    this.panoramityPropertyValue = val
   }
 
 }

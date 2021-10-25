@@ -30,6 +30,7 @@
               [techniques]="techniques"
               [selectedTechniqueIndex]="selectedTechniqueIndex"
               [detalizationPropertyValue]="detalizationPropertyValue"
+              [panoramityPropertyValue]="panoramityPropertyValue"
             ></app-selectedimagesection>
           </div>
           <div class="col-lg-5 col-xl-4">
@@ -43,6 +44,7 @@
               [panoramityProperty]="panoramityProperty"
               [wishToChangeProperty]="wishToChangeProperty"
               (onDetalizationPropertyChanged)="setDetalizationValue($event)"
+              (onPanoramityPropertyChanged)="setPanoramityValue($event)"
             ></app-slidepropertiessection>
           </div>
         </div>

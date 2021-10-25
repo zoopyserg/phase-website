@@ -21,6 +21,7 @@ export class SelectedimagesectionComponent implements AfterViewInit {
 
   _selectedImageIndex: number = 0;
   _detalizationPropertyValue: number = 50;
+  _panoramityPropertyValue: number = 50;
 
   get selectedImageIndex(): number {
     return this._selectedImageIndex;
@@ -35,6 +36,14 @@ export class SelectedimagesectionComponent implements AfterViewInit {
   }
   @Input() set detalizationPropertyValue(value: any) {
     this._detalizationPropertyValue = value;
+    this.drawImage()
+  }
+
+  get panoramityPropertyValue(): any {
+    return this._panoramityPropertyValue;
+  }
+  @Input() set panoramityPropertyValue(value: any) {
+    this._panoramityPropertyValue = value;
     this.drawImage()
   }
 
@@ -58,7 +67,7 @@ export class SelectedimagesectionComponent implements AfterViewInit {
     var context = this.context
     var canvasElement = this.canvasElement
     var contrast = 2 * this._detalizationPropertyValue - 100 // turning range from -100..100 to 0..100 (using y=2x-100 formula)
-    var darkness = Math.max(0, - this._detalizationPropertyValue / 40 + 1) // y=-x/50+1 for darkness alpha intensity, set to 0 if y < 0
+    var darkness = Math.max(0, - this._detalizationPropertyValue / 40 + 1) // y=-x/40+1 for darkness alpha intensity, set to 0 if y < 0
 
     image.addEventListener('load', function(){
       canvasElement.width = image.width
@@ -83,6 +92,8 @@ export class SelectedimagesectionComponent implements AfterViewInit {
       context.globalAlpha = darkness
       context.fillStyle = "black"
       context.fillRect(0, 0, context.canvas.width, context.canvas.height)
+      // cropping
+      var receivedWidth = image.width
 
 
     });

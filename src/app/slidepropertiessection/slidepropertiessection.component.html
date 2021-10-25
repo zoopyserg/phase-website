@@ -5,7 +5,7 @@
     </div>
     <div class="card-body">
       <app-property-slider [phaseProperty]="detalizationProperty" (onPropertyChanged)="setDetalizationValue($event)"></app-property-slider>
-      <app-property-slider [phaseProperty]="panoramityProperty"></app-property-slider>
+      <app-property-slider [phaseProperty]="panoramityProperty" (onPropertyChanged)="setPanoramityValue($event)"></app-property-slider>
       <app-property-slider [phaseProperty]="wishToChangeProperty"></app-property-slider>
     </div>
   </div>
