@@ -58,7 +58,7 @@ export class SelectedimagesectionComponent implements AfterViewInit {
     var context = this.context
     var canvasElement = this.canvasElement
     var contrast = 2 * this._detalizationPropertyValue - 100 // turning range from -100..100 to 0..100 (using y=2x-100 formula)
-    var darkness = Math.max(0, - this._detalizationPropertyValue / 50 + 1) // y=-x/50+1 for darkness alpha intensity, set to 0 if y < 0
+    var darkness = Math.max(0, - this._detalizationPropertyValue / 40 + 1) // y=-x/50+1 for darkness alpha intensity, set to 0 if y < 0
 
     image.addEventListener('load', function(){
       canvasElement.width = image.width
