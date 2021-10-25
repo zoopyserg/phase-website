@@ -44,14 +44,17 @@ export class SelectedimagesectionComponent implements AfterViewInit {
   }
 
   drawImage() {
-    console.log('drawing image')
     var image = new Image();
-    var context = this.context
     image.src = this.imgSrc();
+    var context = this.context
+    var canvasElement = this.canvasElement
+
     image.addEventListener('load', function(){
+      canvasElement.width = image.width
+      canvasElement.height = image.height
       context.drawImage(image, 0, 0);
     });
-    image.src = this.imgSrc()
+    //image.src = this.imgSrc()
   }
 
   detalizationValue(): number {
