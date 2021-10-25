@@ -35,7 +35,8 @@ export class AppComponent {
     { name: "Дом", filename: "house.jpg" },
     { name: "Замок", filename: "castle.jpg" },
     { name: "Птица", filename: "bird.jpg" },
-    { name: "Кошка", filename: "cat.png" }
+    { name: "Кошка", filename: "cat.png" },
+    { name: "Ковёр", filename: "carpet.jpg" }
   ]
 
   selectedImageIndex: number = 0
