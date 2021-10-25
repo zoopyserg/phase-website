@@ -7,7 +7,7 @@ import {Component, ElementRef, Input, Directive, ViewChild, AfterViewInit } from
 })
 
 export class SelectedimagesectionComponent implements AfterViewInit {
-  @Input() detalizationProperty: any
+  //@Input() detalizationProperty: any
   @Input() panoramityProperty: any
   @Input() wishToChangeProperty: any
   @Input() imageNames: any
@@ -21,11 +21,21 @@ export class SelectedimagesectionComponent implements AfterViewInit {
   context!: any
 
   _selectedImageIndex: number = 0;
+  _detalizationProperty: any;
+
   get selectedImageIndex(): number {
     return this._selectedImageIndex;
   }
   @Input() set selectedImageIndex(value: number) {
     this._selectedImageIndex = value;
+    this.drawImage()
+  }
+
+  get detalizationProperty(): any {
+    return this._detalizationProperty;
+  }
+  @Input() set detalizationProperty(value: any) {
+    this._detalizationProperty = value;
     this.drawImage()
   }
 
@@ -48,29 +58,28 @@ export class SelectedimagesectionComponent implements AfterViewInit {
     image.src = this.imgSrc();
     var context = this.context
     var canvasElement = this.canvasElement
+    var contrast = this._detalizationProperty.value - 50
 
     image.addEventListener('load', function(){
       canvasElement.width = image.width
       canvasElement.height = image.height
       context.drawImage(image, 0, 0);
+
+      console.log("test");
+
+      //var imageData = context.createImageData(image.width, image.height)
+      var imageData = context.getImageData(0,0, image.width, image.height)
+
+      var d = imageData.data
+      contrast = (contrast/100) + 1;  //convert to decimal & shift range: [0..2]
+      var intercept = 128 * (1 - contrast);
+      for(var i=0;i<d.length;i+=4){   //r,g,b,a
+        d[i] = d[i]*contrast + intercept;
+        d[i+1] = d[i+1]*contrast + intercept;
+        d[i+2] = d[i+2]*contrast + intercept;
+      }
+      context.putImageData(imageData, 0, 0);
     });
-    //image.src = this.imgSrc()
-  }
-
-  detalizationValue(): number {
-    return this.detalizationProperty - 50
-  }
-
-  contrastImage(imgData: any, contrast: number): any{  //input range [-100..100]
-    var d = imgData.data;
-    contrast = (contrast/100) + 1;  //convert to decimal & shift range: [0..2]
-    var intercept = 128 * (1 - contrast);
-    for(var i=0;i<d.length;i+=4){   //r,g,b,a
-      d[i] = d[i]*contrast + intercept;
-      d[i+1] = d[i+1]*contrast + intercept;
-      d[i+2] = d[i+2]*contrast + intercept;
-    }
-    return imgData;
   }
 
 }
