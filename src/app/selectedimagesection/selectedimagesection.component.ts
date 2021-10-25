@@ -11,7 +11,6 @@ export class SelectedimagesectionComponent implements AfterViewInit {
   @Input() panoramityProperty: any
   @Input() wishToChangeProperty: any
   @Input() imageNames: any
-  //@Input() selectedImageIndex: any
   @Input() techniques: any
   @Input() selectedTechniqueIndex: any
 
@@ -21,7 +20,7 @@ export class SelectedimagesectionComponent implements AfterViewInit {
   context!: any
 
   _selectedImageIndex: number = 0;
-  //_detalizationProperty: any;
+  _detalizationPropertyValue: number = 50;
 
   get selectedImageIndex(): number {
     return this._selectedImageIndex;
@@ -31,13 +30,13 @@ export class SelectedimagesectionComponent implements AfterViewInit {
     this.drawImage()
   }
 
-  // get detalizationProperty(): any {
-  //   return this._detalizationProperty;
-  // }
-  // @Input() set detalizationProperty(value: any) {
-  //   this._detalizationProperty = value;
-  //   this.drawImage()
-  // }
+  get detalizationPropertyValue(): any {
+    return this._detalizationPropertyValue;
+  }
+  @Input() set detalizationPropertyValue(value: any) {
+    this._detalizationPropertyValue = value;
+    this.drawImage()
+  }
 
   constructor() {
 
@@ -59,16 +58,13 @@ export class SelectedimagesectionComponent implements AfterViewInit {
     image.src = this.imgSrc();
     var context = this.context
     var canvasElement = this.canvasElement
-    var contrast = 2 * this.detalizationProperty.value - 100 // turning range from -100..100 to 0..100 (using y=2x-100 formula)
+    var contrast = 2 * this._detalizationPropertyValue - 100 // turning range from -100..100 to 0..100 (using y=2x-100 formula)
 
     image.addEventListener('load', function(){
       canvasElement.width = image.width
       canvasElement.height = image.height
       context.drawImage(image, 0, 0);
 
-      console.log("test");
-
-      //var imageData = context.createImageData(image.width, image.height)
       var imageData = context.getImageData(0,0, image.width, image.height)
 
       var d = imageData.data

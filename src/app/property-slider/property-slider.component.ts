@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-property-slider',
@@ -7,6 +7,9 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class PropertySliderComponent implements OnInit {
   @Input() phaseProperty: any
+  @Output() onPropertyChanged = new EventEmitter<number>();
+
+  _phasePropertyValue: number = 50;
 
   constructor() {
 
@@ -19,4 +22,7 @@ export class PropertySliderComponent implements OnInit {
     return this.phaseProperty.value + "%"
   }
 
+  setPropertyValue(event: any) {
+    this.onPropertyChanged.emit(event.target.value)
+  }
 }

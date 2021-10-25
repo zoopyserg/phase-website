@@ -57,4 +57,11 @@ export class AppComponent {
     this.selectedTechniqueIndex = val
   }
 
+  detalizationPropertyValue: number = 50;
+
+  setDetalizationValue(val: number) {
+    this.detalizationProperty.value = val
+    this.detalizationPropertyValue = val
+  }
+
 }
