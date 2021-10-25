@@ -53,18 +53,20 @@ export class SelectedimagesectionComponent implements AfterViewInit {
   }
 
   drawImage() {
-    console.log('drawing')
     var image = new Image();
     image.src = this.imgSrc();
     var context = this.context
     var canvasElement = this.canvasElement
     var contrast = 2 * this._detalizationPropertyValue - 100 // turning range from -100..100 to 0..100 (using y=2x-100 formula)
+    var darkness = Math.max(0, - this._detalizationPropertyValue / 50 + 1) // y=-x/50+1 for darkness alpha intensity, set to 0 if y < 0
 
     image.addEventListener('load', function(){
       canvasElement.width = image.width
       canvasElement.height = image.height
+
       context.drawImage(image, 0, 0);
 
+      //contrast
       var imageData = context.getImageData(0,0, image.width, image.height)
 
       var d = imageData.data
@@ -76,6 +78,13 @@ export class SelectedimagesectionComponent implements AfterViewInit {
         d[i+2] = d[i+2]*contrast + intercept;
       }
       context.putImageData(imageData, 0, 0);
+      //darkness
+      context.globalCompositeOperation = "darken"
+      context.globalAlpha = darkness
+      context.fillStyle = "black"
+      context.fillRect(0, 0, context.canvas.width, context.canvas.height)
+
+
     });
   }
 
