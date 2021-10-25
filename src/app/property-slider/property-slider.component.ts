@@ -19,8 +19,4 @@ export class PropertySliderComponent implements OnInit {
     return this.phaseProperty.value + "%"
   }
 
-  propertyChangedHandler(): void {
-    // todo: send changes upstream
-  }
-
 }

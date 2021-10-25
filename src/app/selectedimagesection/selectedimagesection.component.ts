@@ -11,7 +11,7 @@ export class SelectedimagesectionComponent implements AfterViewInit {
   @Input() panoramityProperty: any
   @Input() wishToChangeProperty: any
   @Input() imageNames: any
-  @Input() selectedImageIndex: any
+  //@Input() selectedImageIndex: any
   @Input() techniques: any
   @Input() selectedTechniqueIndex: any
 
@@ -19,6 +19,15 @@ export class SelectedimagesectionComponent implements AfterViewInit {
 
   canvasElement!: HTMLCanvasElement;
   context!: any
+
+  _selectedImageIndex: number = 0;
+  get selectedImageIndex(): number {
+    return this._selectedImageIndex;
+  }
+  @Input() set selectedImageIndex(value: number) {
+    this._selectedImageIndex = value;
+    this.drawImage()
+  }
 
   constructor() {
 
@@ -31,10 +40,11 @@ export class SelectedimagesectionComponent implements AfterViewInit {
   }
 
   imgSrc(): string {
-    return "assets/images/objects/" + this.imageNames[this.selectedImageIndex].filename;
+    return "assets/images/objects/" + this.imageNames[this._selectedImageIndex].filename;
   }
 
   drawImage() {
+    console.log('drawing image')
     var image = new Image();
     var context = this.context
     image.src = this.imgSrc();
