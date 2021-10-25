@@ -40,11 +40,7 @@
             ],
             "scripts": [
               "assets/bootstrap/js/bootstrap.min.js",
-              "assets/js/tecniqueSelection.js",
-              "assets/js/CamanJS-master/dist/caman.full.min.js",
-              "assets/js/chart.min.js",
               "assets/js/bs-init.js",
-              "assets/js/imageSelection.js",
               "assets/js/theme.js"
             ]
           },
