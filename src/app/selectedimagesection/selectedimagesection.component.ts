@@ -89,6 +89,11 @@ export class SelectedimagesectionComponent implements AfterViewInit {
       var destinationWidth = receivedWidth
       var destinationHeight = receivedHeight
 
+
+      // fill with black background
+      context.fillStyle = "black"
+      context.fillRect(0, 0, context.canvas.width, context.canvas.height)
+
       context.drawImage(image, startXSource, startYSource, receivedWidth, receivedHeight, startXDestination, startYDestination, destinationWidth, destinationHeight);
 
       //contrast
@@ -102,16 +107,13 @@ export class SelectedimagesectionComponent implements AfterViewInit {
         d[i+1] = d[i+1]*contrast + intercept;
         d[i+2] = d[i+2]*contrast + intercept;
       }
+
       context.putImageData(imageData, 0, 0);
       //darkness
       context.globalCompositeOperation = "darken"
       context.globalAlpha = darkness
       context.fillStyle = "black"
       context.fillRect(0, 0, context.canvas.width, context.canvas.height)
-      // cropping
-
-
-
     });
   }
 
