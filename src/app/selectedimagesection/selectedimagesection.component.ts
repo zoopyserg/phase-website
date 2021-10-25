@@ -7,7 +7,7 @@ import {Component, ElementRef, Input, Directive, ViewChild, AfterViewInit } from
 })
 
 export class SelectedimagesectionComponent implements AfterViewInit {
-  //@Input() detalizationProperty: any
+  @Input() detalizationProperty: any
   @Input() panoramityProperty: any
   @Input() wishToChangeProperty: any
   @Input() imageNames: any
@@ -21,7 +21,7 @@ export class SelectedimagesectionComponent implements AfterViewInit {
   context!: any
 
   _selectedImageIndex: number = 0;
-  _detalizationProperty: any;
+  //_detalizationProperty: any;
 
   get selectedImageIndex(): number {
     return this._selectedImageIndex;
@@ -31,13 +31,13 @@ export class SelectedimagesectionComponent implements AfterViewInit {
     this.drawImage()
   }
 
-  get detalizationProperty(): any {
-    return this._detalizationProperty;
-  }
-  @Input() set detalizationProperty(value: any) {
-    this._detalizationProperty = value;
-    this.drawImage()
-  }
+  // get detalizationProperty(): any {
+  //   return this._detalizationProperty;
+  // }
+  // @Input() set detalizationProperty(value: any) {
+  //   this._detalizationProperty = value;
+  //   this.drawImage()
+  // }
 
   constructor() {
 
@@ -54,11 +54,12 @@ export class SelectedimagesectionComponent implements AfterViewInit {
   }
 
   drawImage() {
+    console.log('drawing')
     var image = new Image();
     image.src = this.imgSrc();
     var context = this.context
     var canvasElement = this.canvasElement
-    var contrast = this._detalizationProperty.value - 50
+    var contrast = 2 * this.detalizationProperty.value - 100 // turning range from -100..100 to 0..100 (using y=2x-100 formula)
 
     image.addEventListener('load', function(){
       canvasElement.width = image.width

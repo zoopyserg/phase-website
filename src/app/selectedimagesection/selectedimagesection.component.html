@@ -16,6 +16,7 @@
   </div>
   <div class="card-body">
     <canvas class="w-100" #myCanvas > </canvas>
+    <input [(ngModel)]="detalizationProperty.value" (ngModelChange)="drawImage()"/>
     <img id="displayedObjectImage" class="w-100" [src]="imgSrc()" #myImage>
     <div>{{ detalizationProperty.value }}</div>
     <div>{{ panoramityProperty.value }}</div>
