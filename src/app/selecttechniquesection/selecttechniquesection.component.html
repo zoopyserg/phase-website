@@ -1,6 +1,7 @@
 <div class="card shadow mb-4">
   <div class="card-header py-3">
     <h6 class="text-primary fw-bold m-0">Техники</h6>
+    <p>При выборе техники на слайдерах будет показан ожидаемый эффект от неё. Используя техники на засыпании после прерванного сна можно исползовать их для входа в фазное состояние. Используя техники уже внутри фазы можно использовать их для получения нужного состояния фазы (повышать реализм и прочее). При выборе техники возможность вручную редактировать Панорамность и Детализацию на слайдерах будет отключена, пока не включите снова опцию (Технику Не Выбрано)</p>
   </div>
   <ul class="list-group list-group-flush">
     <app-technique-name *ngFor="let technique of techniques; let i = index" [technique]="technique" [selectedTechniqueIndex]="selectedTechniqueIndex" [currentTechniqueIndex]="i" (onSelectedTechniqueChange)="setSelectedTechnique($event)"></app-technique-name>
