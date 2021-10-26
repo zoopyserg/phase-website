@@ -46,6 +46,9 @@ export class AppComponent implements OnInit {
   numberAnimationStepDuration: number = 20;
   numberAnimationStartedAt: any;
   selectedHeaderTabIndex = 0
+  endlessHeaderTabLoop : any;
+  endlessHeaderTabLoopDuration : number = 7000;
+
 
   detalizationProperty: PhaseProperty = {name: "Детализация", value: 50}
   panoramityProperty: PhaseProperty = {name: "Панорамность", value: 50}
@@ -524,7 +527,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.headerTabs.length)
+    this.initChangingHeaderTabLoop()
   }
 
   initEndlessLoop() {
@@ -535,6 +538,18 @@ export class AppComponent implements OnInit {
     }
   }
 
+  initChangingHeaderTabLoop() {
+    if (!(this.endlessHeaderTabLoop)) {
+      this.endlessHeaderTabLoop = setInterval(() => {
+        this.selectNextTab()
+      }, this.endlessHeaderTabLoopDuration);
+    }
+  }
+
+  selectNextTab() {
+    this.selectedHeaderTabIndex = this.nextTabIndex()
+  }
+
   ngOnDestroy() {
     this.clearAllTimers()
   }
@@ -543,6 +558,7 @@ export class AppComponent implements OnInit {
     this.clearEndlessLoop()
     this.clearTimerDetalization()
     this.clearTimerPanoramity()
+    this.clearHeaderTabLoop()
   }
 
   clearTimerPanoramity() {
@@ -563,6 +579,13 @@ export class AppComponent implements OnInit {
     if (this.endlessTimerID) {
       clearInterval(this.endlessTimerID);
       this.endlessTimerID = null;
+    }
+  }
+
+  clearHeaderTabLoop() {
+    if (this.endlessHeaderTabLoop) {
+      clearInterval(this.endlessHeaderTabLoop);
+      this.endlessHeaderTabLoop = null;
     }
   }
 
