@@ -14,6 +14,7 @@ import { PropertySliderComponent } from './property-slider/property-slider.compo
 import { FormsModule } from "@angular/forms";
 import { ImageNameComponent } from './image-name/image-name.component';
 import { TechniqueNameComponent } from './technique-name/technique-name.component';
+import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 
 @NgModule({
   declarations: [
@@ -38,3 +39,6 @@ import { TechniqueNameComponent } from './technique-name/technique-name.componen
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
