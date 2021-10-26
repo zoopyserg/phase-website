@@ -19,6 +19,7 @@ export interface ImageName {
 export interface Technique {
   name: string
   description: string
+  tutorialUrl: any
   startDetalization: number
   endDetalization: number
   startPanoramity: number
@@ -331,6 +332,7 @@ export class AppComponent implements OnInit {
     {
       name: "(технику не выбрано)",
       description: "Выберите технику чтоб увидеть её эффект",
+      tutorialUrl: null,
       startDetalization: this.detalizationPropertyValue,
       endDetalization: this.detalizationPropertyValue,
       startPanoramity: this.panoramityPropertyValue,
@@ -341,6 +343,7 @@ export class AppComponent implements OnInit {
     {
       name: "Сенсоризация (Сенсорно Моторная Визуализация)",
       description: "Быстрое но внимательное ощупывание плюс рассматривание вблизи",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
@@ -351,6 +354,7 @@ export class AppComponent implements OnInit {
     {
       name: "Рассматривание / Разглядывание Деталей Предметов Вблизи",
       description: "Без касания к предметам просто ближе на них посмотреть",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
@@ -361,6 +365,7 @@ export class AppComponent implements OnInit {
     {
       name: "Изменение Ракурса",
       description: "Посмотреть на фантомные предметы под другим углом, или посмотреть что за ними и т.п.",
+      tutorialUrl: null,
       startDetalization: 30,
       endDetalization: 40,
       startPanoramity: 20,
@@ -371,6 +376,7 @@ export class AppComponent implements OnInit {
     {
       name: "Ходить по пространству, Поднимать предметы и называть их",
       description: "Одна из самых эффективных техник на сегодняшний день",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
@@ -381,6 +387,7 @@ export class AppComponent implements OnInit {
     {
       name: "Понимание физиологии состояния",
       description: "Осознание что я всегда \"в фазе\", что реальный мир я никогда не видел, только его отображение моим генератором фазы.",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 30,
@@ -391,6 +398,7 @@ export class AppComponent implements OnInit {
     {
       name: "Приказ",
       description: "Главная Техника (особенно внутри фазы). Озвучить Всем Своим Нутром И Криком Приказ (чего ты хочешь от пространства). В комбинации с Панорамной Детализацией она вообще даёт ощущение что ты бог (т.е. Приказ \"Я Вижу Каждую Деталь Этой Панорамы / Данных Обстоятельств / Данной ситуации)\").",
+      tutorialUrl: null,
       startDetalization: 50,
       endDetalization: 50,
       startPanoramity: 20,
@@ -401,6 +409,7 @@ export class AppComponent implements OnInit {
     {
       name: "Намеренье (попасть туда)",
       description: "Чёткая цель войти в фазное состояние",
+      tutorialUrl: null,
       startDetalization: 50,
       endDetalization: 55,
       startPanoramity: 55,
@@ -411,6 +420,7 @@ export class AppComponent implements OnInit {
     {
       name: "Вспоминание состояния",
       description: "Вспомнить каково это было быть в фазе.",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 50,
@@ -421,6 +431,7 @@ export class AppComponent implements OnInit {
     {
       name: "Вспоминание вибраций",
       description: "Вспомнить ощущение вибраций которые хоть раз были.",
+      tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=276s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 50,
@@ -431,6 +442,7 @@ export class AppComponent implements OnInit {
     {
       name: "Вспоминание проявлений техник",
       description: "Делая технику вспомнить какие эффекты она даёт.",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 70,
       startPanoramity: 20,
@@ -441,6 +453,7 @@ export class AppComponent implements OnInit {
     {
       name: "Техника перемещения",
       description: "Переместиться в фазном пространстве туда куда нам нужно",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 40,
@@ -451,6 +464,7 @@ export class AppComponent implements OnInit {
     {
       name: "Техника страха",
       description: "Жутко испугаться увиденного",
+      tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=445s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
       startDetalization: 20,
       endDetalization: 100,
       startPanoramity: 20,
@@ -461,6 +475,7 @@ export class AppComponent implements OnInit {
     {
       name: "Техника счёта",
       description: "Попытаться фантомно считать от 1 до 200 например.",
+      tutorialUrl: null,
       startDetalization: 50,
       endDetalization: 50,
       startPanoramity: 50,
@@ -471,6 +486,7 @@ export class AppComponent implements OnInit {
     {
       name: "Пытаться не заметить что я уснул, но заметить проявления фазы",
       description: "С такой формулировкой пытаться уснуть",
+      tutorialUrl: null,
       startDetalization: 0,
       endDetalization: 80,
       startPanoramity: 0,
@@ -481,6 +497,7 @@ export class AppComponent implements OnInit {
     {
       name: "Ярость",
       description: "Выдать крик ярости, крик пронизывающий всё.",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 60,
       startPanoramity: 20,
@@ -491,6 +508,7 @@ export class AppComponent implements OnInit {
     {
       name: "Поощущать Ниточки Формулирующие текущую картинку реальности. ",
       description: "Сделать такую формулировку. Будь то Приказом или другими способами.",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 100,
       startPanoramity: 20,
@@ -501,6 +519,7 @@ export class AppComponent implements OnInit {
     {
       name: "Формулировка что то что я ищу уже есть только я почему-то его не вижу",
       description: "С фразой \"там (где я не вижу - за дверью и т.п.) уже Есть (тот предмет который я ищу) только я его почему-то не вижу\" - за дверью, в коробке, там куда я не смотрю",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 50,
@@ -511,6 +530,7 @@ export class AppComponent implements OnInit {
     {
       name: "Фантомное Раскачивание",
       description: "Делать движения фантомными частями тела.",
+      tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=570s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
       startDetalization: 20,
       endDetalization: 70,
       startPanoramity: 20,
@@ -521,6 +541,7 @@ export class AppComponent implements OnInit {
     {
       name: "Фантомное вращение.",
       description: "Вращаться фантомным телом вокруг какой-то из своих осей - вокруг оси Х, оси У или оси Z",
+      tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=146s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
       startDetalization: 20,
       endDetalization: 50,
       startPanoramity: 20,
@@ -531,6 +552,7 @@ export class AppComponent implements OnInit {
     {
       name: "Изменение позы с целью достичь Не-Параллельности телу",
       description: "Попытаться фантомным телом стать не параллельно своему физическому телу.",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 70,
       startPanoramity: 20,
@@ -541,6 +563,7 @@ export class AppComponent implements OnInit {
     {
       name: "Выкатывание.",
       description: "Выкатиться фантомным телом из физического.",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 50,
       startPanoramity: 20,
@@ -551,6 +574,7 @@ export class AppComponent implements OnInit {
     {
       name: "Замах",
       description: "С замахом сделать движение фантомным телом.",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 50,
       startPanoramity: 20,
@@ -561,6 +585,7 @@ export class AppComponent implements OnInit {
     {
       name: "Вставание",
       description: "Просто встать",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 60,
       startPanoramity: 20,
@@ -571,6 +596,7 @@ export class AppComponent implements OnInit {
     {
       name: "Взлёт",
       description: "Одна из самых эффективных техник на сегодняшний день",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
@@ -581,6 +607,7 @@ export class AppComponent implements OnInit {
     {
       name: "Зацеп",
       description: "Схватить фантомной рукой фантомный предмет",
+      tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=720s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 40,
@@ -591,6 +618,7 @@ export class AppComponent implements OnInit {
     {
       name: "Танец",
       description: "Потанцевать фантомным телом в фантомном пространстве",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 50,
       startPanoramity: 20,
@@ -601,6 +629,7 @@ export class AppComponent implements OnInit {
     {
       name: "Провалиться вниз",
       description: "Стремительно упасть куда-то вниз в фантомном пространстве",
+      tutorialUrl: null,
       startDetalization: 60,
       endDetalization: 10,
       startPanoramity: 20,
@@ -611,6 +640,7 @@ export class AppComponent implements OnInit {
     {
       name: "Кувырок через голову",
       description: "Кувыркнуться фантомным телом через фантомную голову",
+      tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=146s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
@@ -621,6 +651,7 @@ export class AppComponent implements OnInit {
     {
       name: "Вытягивание",
       description: "Представить что меня вытягивает туда куда мне нужно.",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
@@ -631,6 +662,7 @@ export class AppComponent implements OnInit {
     {
       name: "Идти куда мне нужно",
       description: "Пройтись по фантомному пространству фантомными ногами.",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 50,
       startPanoramity: 20,
@@ -641,6 +673,7 @@ export class AppComponent implements OnInit {
     {
       name: "Полёт",
       description: "Полетать по фантомному пространству",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
@@ -651,6 +684,7 @@ export class AppComponent implements OnInit {
     {
       name: "Закрыть часть фантомной видимости фантомной рукой и представить что за рукой он уже есть то что мне надо. Назову это \"Божественный метод\".",
       description: "Одна из самых эффективных техник на сегодняшний день. Почти всегда даёт гиперреализм.",
+      tutorialUrl: null,
       startDetalization: 50,
       endDetalization: 100,
       startPanoramity: 40,
@@ -661,6 +695,7 @@ export class AppComponent implements OnInit {
     {
       name: "Панорамно-Детализированное Наблюдение Образов ",
       description: "Пытаться увидеть панораму и детали (т.е. детали предметов на краю горизонта или видных краем глаза)",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
@@ -671,6 +706,7 @@ export class AppComponent implements OnInit {
     {
       name: "Наблюдение образов из центра головы",
       description: "С такой формулировкой смотреть на фантомный образ",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 50,
       startPanoramity: 20,
@@ -681,6 +717,7 @@ export class AppComponent implements OnInit {
     {
       name: "Визуализация",
       description: "Если образов нету - представить будто они есть",
+      tutorialUrl: null,
       startDetalization: 0,
       endDetalization: 50,
       startPanoramity: 20,
@@ -691,6 +728,7 @@ export class AppComponent implements OnInit {
     {
       name: "Поднимать предметы и называть их",
       description: "Одна из самых эффективных техник на сегодняшний день",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 100,
       startPanoramity: 20,
@@ -701,6 +739,7 @@ export class AppComponent implements OnInit {
     {
       name: "Инерция",
       description: "Представить что меня куда-то тянет",
+      tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=146s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
       startDetalization: 20,
       endDetalization: 50,
       startPanoramity: 20,
@@ -709,8 +748,9 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
-      name: "Представление G-Force (вестебюлярных перепадов)",
+      name: "Представление G-Force (вестибюлярных перепадов)",
       description: "Попытаться ощутить что меня бросает будто я в истребителе лечу",
+      tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=146s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
       startDetalization: 20,
       endDetalization: 50,
       startPanoramity: 20,
@@ -721,6 +761,7 @@ export class AppComponent implements OnInit {
     {
       name: "Стремительное (скоростное) падение (полёт) вниз головой закрыв глаза.",
       description: "Стремительное (скоростное) падение (полёт) вниз головой закрыв глаза.",
+      tutorialUrl: null,
       startDetalization: 80,
       endDetalization: 5,
       startPanoramity: 20,
@@ -731,6 +772,7 @@ export class AppComponent implements OnInit {
     {
       name: "Визуализация рук",
       description: "Представить свои руки, фантомно тереть их и т.п.",
+      tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=720s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
       startDetalization: 20,
       endDetalization: 50,
       startPanoramity: 0,
@@ -741,6 +783,7 @@ export class AppComponent implements OnInit {
     {
       name: "Представление любого вида перемещения используя свои фантомные руки или ноги.",
       description: "Плаванье, бег, лазанье на канате, секс",
+      tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=570s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
       startDetalization: 20,
       endDetalization: 60,
       startPanoramity: 20,
@@ -751,6 +794,7 @@ export class AppComponent implements OnInit {
     {
       name: "Прислушивание",
       description: "Услышать или прислушаться есть ли внутри головы шум или звуки какие-то.",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
@@ -761,6 +805,7 @@ export class AppComponent implements OnInit {
     {
       name: "Представление звуков",
       description: "Если звуков нету представить какие бы они были если бы они были",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
@@ -771,6 +816,7 @@ export class AppComponent implements OnInit {
     {
       name: "Попытки услышать как МЕНЯ кто-то зовёт по имени",
       description: "Разновидность прислушивания",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
@@ -781,6 +827,7 @@ export class AppComponent implements OnInit {
     {
       name: "Звать кого-то самому",
       description: "Используя фантомный голос позвать кого-то в фантомном пространстве",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 50,
       startPanoramity: 20,
@@ -791,6 +838,7 @@ export class AppComponent implements OnInit {
     {
       name: "Напряжение мозга",
       description: "Попробовать напрячь свой мозг",
+      tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=276s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
@@ -801,6 +849,7 @@ export class AppComponent implements OnInit {
     {
       name: "Представление предмета в руке которой я не вижу",
       description: "Держа руку за спиной или вне поля зрения попробовать ощутить в ней нужный предмет",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 50,
       startPanoramity: 40,
@@ -811,6 +860,7 @@ export class AppComponent implements OnInit {
     {
       name: "Напряжение всего тела без напряжения мышц",
       description: "Т.е. напрячь фантомное тело а не физическое",
+      tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
@@ -821,6 +871,7 @@ export class AppComponent implements OnInit {
     {
       name: "Движение глаз быстро влево-вправо (физическое) ",
       description: "Реальными физическими глазами закрытыми",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
@@ -831,6 +882,7 @@ export class AppComponent implements OnInit {
     {
       name: "Точка во лбу",
       description: "С закрытыми глазами попытаться увидеть чуть выше линии глаз точку внутри черепа",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 50,
       startPanoramity: 30,
@@ -841,6 +893,7 @@ export class AppComponent implements OnInit {
     {
       name: "Гипервентеляция",
       description: "Перенасытить организм кислородом часто дыша.",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 50,
       startPanoramity: 10,
@@ -851,6 +904,7 @@ export class AppComponent implements OnInit {
     {
       name: "Представление что меня кто-то вытаскивает из тела",
       description: "Какой-то человек или существо тянет меня туда куда мне надо",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
@@ -861,6 +915,7 @@ export class AppComponent implements OnInit {
     {
       name: "Представь что ты сейчас находишься в реальности",
       description: "Будучи в фантомном мире представить что он является реальностью",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 50,
       startPanoramity: 20,
@@ -871,6 +926,7 @@ export class AppComponent implements OnInit {
     {
       name: "Представление себя разделенным (например, стоящим рядом с кроватью)",
       description: "Т.е. представлять себя фантомного в том ракурсе фантомного мира в каком нужно.",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 50,
       startPanoramity: 20,
@@ -881,6 +937,7 @@ export class AppComponent implements OnInit {
     {
       name: "Плацебо. Предстаь, что некоторые предметы помогают тебе достичь некоторых результатов.",
       description: "Т.е. представить например напиток углубляющий состояние фазы. Или представить предмет-углублятор.",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 50,
       startPanoramity: 40,
@@ -891,6 +948,7 @@ export class AppComponent implements OnInit {
     {
       name: "Вспоминание того что не знал",
       description: "Техника попытки вспомнить что-то. Например будучи в фантомном мире попытаться вспомнить рецепт гениального и вкусного торта",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
@@ -901,6 +959,7 @@ export class AppComponent implements OnInit {
     {
       name: "Вспоминание того что знал",
       description: "Если вспомнить в реале не получается можно попробовать вспомнить в фантомном мире. Например то что забылось ещё 20 лет назад.",
+      tutorialUrl: null,
       startDetalization: 20,
       endDetalization: 70,
       startPanoramity: 20,
