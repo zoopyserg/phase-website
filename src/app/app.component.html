@@ -3,7 +3,10 @@
     <div id="content">
       <app-header
         [selectedHeaderTabIndex]="selectedHeaderTabIndex"
+        [nextTabIndex]="nextTabIndex()"
+        [previousTabIndex]="previousTabIndex()"
         [headerTabs]="headerTabs"
+        (onSelectedHeaderTabChange)="setSelectedHeaderTab($event)"
       ></app-header>
       <div class="container-fluid">
         <div class="row">

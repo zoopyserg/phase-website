@@ -309,6 +309,18 @@ export class AppComponent implements OnInit {
     this.selectedImageIndex = val
   }
 
+  setSelectedHeaderTab(val: number) {
+    this.selectedHeaderTabIndex = val
+  }
+
+  nextTabIndex() {
+    return ( this.selectedHeaderTabIndex < (this.headerTabs.length - 1) ? this.selectedHeaderTabIndex + 1 : 0)
+  }
+
+  previousTabIndex() {
+    return ( this.selectedHeaderTabIndex > 0 ? this.selectedHeaderTabIndex - 1 : this.headerTabs.length - 1)
+  }
+
   techniques: Technique[] = [
     {
       name: "(технику не выбрано)",

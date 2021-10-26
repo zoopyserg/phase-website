@@ -16,7 +16,6 @@ import { ImageNameComponent } from './image-name/image-name.component';
 import { TechniqueNameComponent } from './technique-name/technique-name.component';
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 import { HeaderTabComponent } from './header-tab/header-tab.component';
-import { HeaderTabLinkComponent } from './header-tab-link/header-tab-link.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +31,7 @@ import { HeaderTabLinkComponent } from './header-tab-link/header-tab-link.compon
     PropertySliderComponent,
     ImageNameComponent,
     TechniqueNameComponent,
-    HeaderTabComponent,
-    HeaderTabLinkComponent
+    HeaderTabComponent
   ],
   imports: [
     BrowserModule,
