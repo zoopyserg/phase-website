@@ -7,6 +7,36 @@
         Как делать:
         <a href="technique.tutorialUrl" target="_blank">ссылка на видео</a>
       </p>
+      <p class="text-xs my-0">
+        Детализация:
+        <span [ngClass]="{ 'text-danger': differenceBetweenDetalizations() < 0, 'text-success': differenceBetweenDetalizations() > 0 }">
+          <strong>
+            {{ detalizationString() }}
+            <i class="fas fa-arrow-up" *ngIf="differenceBetweenDetalizations() > 0"></i>
+            <i class="fas fa-arrow-down" *ngIf="differenceBetweenDetalizations() < 0"></i>
+          </strong>
+        </span>
+      </p>
+      <p class="text-xs my-0">
+        Панорамность:
+        <span [ngClass]="{ 'text-danger': differenceBetweenPanoramities() < 0, 'text-success': differenceBetweenPanoramities() > 0 }">
+          <strong>
+            {{ panoramityString() }}
+            <i class="fas fa-arrow-up" *ngIf="differenceBetweenPanoramities() > 0"></i>
+            <i class="fas fa-arrow-down" *ngIf="differenceBetweenPanoramities() < 0"></i>
+          </strong>
+        </span>
+      </p>
+      <p class="text-xs my-0">
+        Желание изменить картинку:
+        <span [ngClass]="{ 'text-danger': differenceBetweenWishesToChange() > 0, 'text-success': differenceBetweenWishesToChange() < 0 }">
+          <strong>
+            {{ wishToChangeString() }}
+            <i class="fas fa-arrow-up" *ngIf="differenceBetweenWishesToChange() > 0"></i>
+            <i class="fas fa-arrow-down" *ngIf="differenceBetweenWishesToChange() < 0"></i>
+          </strong>
+        </span>
+      </p>
     </div>
     <div class="col-auto">
       <div class="form-check">

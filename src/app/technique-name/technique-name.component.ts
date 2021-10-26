@@ -23,4 +23,70 @@ export class TechniqueNameComponent implements OnInit {
   isChecked(): boolean {
     return this.selectedTechniqueIndex == this.currentTechniqueIndex
   }
+
+  differenceBetweenDetalizations() {
+    return this.technique.endDetalization - this.technique.startDetalization
+  }
+
+  detalizationPlusOrMinus() {
+    if (this.differenceBetweenDetalizations() > 0) {
+      return "+"
+    } else if (this.differenceBetweenDetalizations() < 0) {
+      return "-"
+    } else {
+      return ""
+    }
+  }
+
+  absoluteDifferenceBetweenDetalizations() {
+    return Math.abs(this.differenceBetweenDetalizations())
+  }
+
+  detalizationString() {
+    return this.detalizationPlusOrMinus() + this.absoluteDifferenceBetweenDetalizations() + "%"
+  }
+
+  differenceBetweenPanoramities() {
+    return this.technique.endPanoramity - this.technique.startPanoramity
+  }
+
+  panoramityPlusOrMinus() {
+    if (this.differenceBetweenPanoramities() > 0) {
+      return "+"
+    } else if (this.differenceBetweenPanoramities() < 0) {
+      return "-"
+    } else {
+      return ""
+    }
+  }
+
+  absoluteDifferenceBetweenPanoramities() {
+    return Math.abs(this.differenceBetweenPanoramities())
+  }
+
+  panoramityString() {
+    return this.panoramityPlusOrMinus() + this.absoluteDifferenceBetweenPanoramities() + "%"
+  }
+
+  differenceBetweenWishesToChange() {
+    return this.technique.endDesireToChange - this.technique.startDesireToChange
+  }
+
+  wishToChangePlusOrMinus() {
+    if (this.differenceBetweenWishesToChange() > 0) {
+      return "+"
+    } else if (this.differenceBetweenWishesToChange() < 0) {
+      return "-"
+    } else {
+      return ""
+    }
+  }
+
+  absoluteDifferenceBetweenWishesToChange() {
+    return Math.abs(this.differenceBetweenWishesToChange())
+  }
+
+  wishToChangeString() {
+    return this.wishToChangePlusOrMinus() + this.absoluteDifferenceBetweenWishesToChange() + "%"
+  }
 }
