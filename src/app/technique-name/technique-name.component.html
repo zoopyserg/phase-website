@@ -37,6 +37,16 @@
           </strong>
         </span>
       </p>
+      <p class="text-xs my-0">
+        Суммарная эффективность:
+        <span [ngClass]="{ 'text-danger': totalDifference() < 0, 'text-success': totalDifference() > 0 }">
+          <strong>
+            {{ totalDifferenceString() }}
+            <i class="fas fa-arrow-up" *ngIf="totalDifference() > 0"></i>
+            <i class="fas fa-arrow-down" *ngIf="totalDifference() < 0"></i>
+          </strong>
+        </span>
+      </p>
     </div>
     <div class="col-auto">
       <div class="form-check">

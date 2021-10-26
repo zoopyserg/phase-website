@@ -89,4 +89,12 @@ export class TechniqueNameComponent implements OnInit {
   wishToChangeString() {
     return this.wishToChangePlusOrMinus() + this.absoluteDifferenceBetweenWishesToChange() + "%"
   }
+
+  totalDifference() {
+    return this.differenceBetweenDetalizations() + this.differenceBetweenPanoramities() - this.differenceBetweenWishesToChange()
+  }
+
+  totalDifferenceString() {
+    return this.totalDifference() + "%"
+  }
 }
