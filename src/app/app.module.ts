@@ -15,6 +15,8 @@ import { FormsModule } from "@angular/forms";
 import { ImageNameComponent } from './image-name/image-name.component';
 import { TechniqueNameComponent } from './technique-name/technique-name.component';
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
+import { HeaderTabComponent } from './header-tab/header-tab.component';
+import { HeaderTabLinkComponent } from './header-tab-link/header-tab-link.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
     SelectedimagesectionComponent,
     PropertySliderComponent,
     ImageNameComponent,
-    TechniqueNameComponent
+    TechniqueNameComponent,
+    HeaderTabComponent,
+    HeaderTabLinkComponent
   ],
   imports: [
     BrowserModule,

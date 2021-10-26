@@ -5,6 +5,13 @@ export interface PhaseProperty {
   value: number
 }
 
+export interface HeaderTab {
+  name: string
+  description: string
+  backgroundClass: string
+}
+
+
 export interface ImageName {
   name: string
   filename: string
@@ -38,6 +45,7 @@ export class AppComponent implements OnInit {
   animationDuration: number = 3000;
   numberAnimationStepDuration: number = 20;
   numberAnimationStartedAt: any;
+  selectedHeaderTabIndex = 0
 
   detalizationProperty: PhaseProperty = {name: "Детализация", value: 50}
   panoramityProperty: PhaseProperty = {name: "Панорамность", value: 50}
@@ -52,6 +60,249 @@ export class AppComponent implements OnInit {
     {name: "Птица", filename: "bird.jpg"},
     {name: "Кошка", filename: "cat.png"},
     {name: "Ковёр", filename: "carpet.jpg"}
+  ]
+
+  headerTabs: HeaderTab[] = [
+    {
+      name: "Rebreathing",
+      description: "Занятие гипервентеляцией (частым дыханием) с целью вызвать галлюцинации и в них увидеть прозрения.",
+      backgroundClass: "hero-rebreathing"
+    },
+    {
+      name: "Астрал",
+      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир",
+      backgroundClass: "hero-astral"
+    },
+    {
+      name: "Астральное путешествие",
+      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир",
+      backgroundClass: "hero-astral-travel"
+    },
+    {
+      name: "Астральные проекции",
+      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир",
+      backgroundClass: "hero-astral-projection"
+    },
+    {
+      name: "Аутотренинг",
+      description: "Попытка изменить своё восприятие методом частого повторения того или иного концепта.",
+      backgroundClass: "hero-autotraining"
+    },
+    {
+      name: "Аффекты",
+      description: "Состояние в котором человек совершает некоторые действия, возможно осознаёт их, но осознанно на них не влияет",
+      backgroundClass: "hero-affect"
+    },
+    {
+      name: "Бог",
+      description: "Собирательный образ всех вещей которые люди видели входя в созерцание \"фантомного\" мира",
+      backgroundClass: "hero-god"
+    },
+    {
+      name: "Брейнсторм",
+      description: "Полёт сознания с целью развивать некоторое знание \"из того что есть, в то что может быть\"",
+      backgroundClass: "hero-brainstorm"
+    },
+    {
+      name: "Быстрый сон",
+      description: "Состояние мозга во время сна в котором человек видит сны",
+      backgroundClass: "hero-rem-sleep"
+    },
+    {
+      name: "Виртуальная Реальность",
+      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир",
+      backgroundClass: "hero-virtual-reality"
+    },
+    {
+      name: "Внетелесные путешествия",
+      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир",
+      backgroundClass: "hero-out-of-body-travel"
+    },
+    {
+      name: "Внетелесный опыт",
+      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир",
+      backgroundClass: "hero-out-of-body-experience"
+    },
+    {
+      name: "Восприятие",
+      description: "Механизмы мозга показывающие нам то что узнали о мире но говорящие что это и есть мир",
+      backgroundClass: "hero-perception"
+    },
+    {
+      name: "Вход в другое измерение",
+      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир",
+      backgroundClass: "hero-entering-other-dimention"
+    },
+    {
+      name: "Выход души из тела",
+      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир.",
+      backgroundClass: "hero-soul-exiting-body"
+    },
+    {
+      name: "Галлюцинации",
+      description: "Условное название ощущений, в которых человек частично осознаёт одновременно и реальный и \"фантомный\" мир",
+      backgroundClass: "hero-hallucination"
+    },
+    {
+      name: "Гипноз",
+      description: "Условное название ощущений, в которых человек частично осознаёт одновременно и реальный и \"фантомный\" мир",
+      backgroundClass: "hero-hypnosis"
+    },
+    {
+      name: "Диссоциативное переживане",
+      description: "Условное название ощущений, в которых человек частично осознаёт одновременно и реальный и \"фантомный\" мир",
+      backgroundClass: "hero-dissociation"
+    },
+    {
+      name: "Диссоциативное состояние",
+      description: "Условное название ощущений, в которых человек частично осознаёт одновременно и реальный и \"фантомный\" мир",
+      backgroundClass: "hero-dissociative-state"
+    },
+    {
+      name: "Душа",
+      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир.",
+      backgroundClass: "hero-soul"
+    },
+    {
+      name: "Знаки свыше",
+      description: "Условное название ощущений, в которых человек частично осознаёт реальный мир и частично накладывает на него свои прозрения",
+      backgroundClass: "hero-signs"
+    },
+    {
+      name: "Изменённое состояние мозга",
+      description: "Условное собирательное название всех состояний мозга отличимых от восприятия реальности в режиме бодрствования",
+      backgroundClass: "hero-changed-brain-state"
+    },
+    {
+      name: "Изменённое состояние сознания",
+      description: "Условное собирательное название всех состояний мозга отличимых от восприятия реальности в режиме бодрствования",
+      backgroundClass: "hero-changed-conciousness-state"
+    },
+    {
+      name: "Иллюзии",
+      description: "Условное название ощущений, в которых человек частично осознаёт реальный мир и частично накладывает на него свои прозрения",
+      backgroundClass: "hero-illusions"
+    },
+    {
+      name: "Интуиция",
+      description: "Условное название ощущений, в которых человек частично осознаёт реальный мир и частично накладывает на него свои прозрения",
+      backgroundClass: "hero-intuition"
+    },
+    {
+      name: "Истерии",
+      description: "Состояние в котором человек совершает некоторые действия, возможно осознаёт их, но осознанно на них не влияет",
+      backgroundClass: "hero-histeria"
+    },
+    {
+      name: "Клиническая смерть",
+      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир.",
+      backgroundClass: "hero-clinical-death"
+    },
+    {
+      name: "Ложное пробуждение",
+      description: "Условное название ощущений, в которых ощущаешь \"фантомный\" мир но думаешь что ощущаешь реальный.",
+      backgroundClass: "hero-false-awakening"
+    },
+    {
+      name: "Массовые Истерии",
+      description: "Состояние в котором несколько человек совершают некоторые действия, возможно осознают их, но осознанно на них не влияют, часто подталкивая друг друга",
+      backgroundClass: "hero-mass-histeria"
+    },
+    {
+      name: "Медитация",
+      description: "Условная искажённая попытка разными малоэффективными методами попасть в \"фантомный мир\" или увидеть в нём прозрение",
+      backgroundClass: "hero-meditation"
+    },
+    {
+      name: "Мистика",
+      description: "Собирательный ряд течений деятельности человека, направленный на то чтоб помимо темы \"фантомного мира\" впарить людям то или иное непрактичное объяснение",
+      backgroundClass: "hero-mistique"
+    },
+    {
+      name: "Осознанные сноведения",
+      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир.",
+      backgroundClass: "hero-lucid-dreams"
+    },
+    {
+      name: "Параллельный мир",
+      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир.",
+      backgroundClass: "hero-parallel-reality"
+    },
+    {
+      name: "Похищение инопланетянами",
+      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир. Часто с тематикой похищения.",
+      backgroundClass: "hero-alien-abduction"
+    },
+    {
+      name: "Предчувствие",
+      description: "Условное название ощущений, в которых человек частично осознаёт реальный мир и частично накладывает на него свои прозрения",
+      backgroundClass: "hero-forseeing"
+    },
+    {
+      name: "Припадки",
+      description: "Состояние в котором человек совершает некоторые действия, возможно осознаёт их, но осознанно на них не влияет",
+      backgroundClass: "hero-nervous-breakdown"
+    },
+    {
+      name: "Приступы",
+      description: "Состояние в котором человек совершает некоторые действия, возможно осознаёт их, но осознанно на них не влияет",
+      backgroundClass: "hero-nervous-convultions"
+    },
+    {
+      name: "Прозрения",
+      description: "Условное название ощущений, в которых человек частично осознаёт реальный мир и частично накладывает на него свои выводы",
+      backgroundClass: "hero-seeing-future"
+    },
+    {
+      name: "Психозы",
+      description: "Состояние в котором человек совершает некоторые действия, возможно осознаёт их, но осознанно на них не влияет",
+      backgroundClass: "hero-psychosis"
+    },
+    {
+      name: "Самогипноз",
+      description: "Условное название ощущений, в которых человек частично осознаёт одновременно и реальный и \"фантомный\" мир",
+      backgroundClass: "hero-self-hypnosis"
+    },
+    {
+      name: "Сборка",
+      description: "Один из видов медитации, заключающийся в концентрации на ощущениях своего пульса с целью войти в транс (в \"фантомный\" мир)",
+      backgroundClass: "hero-self-collection"
+    },
+    {
+      name: "Свет в конце туннеля",
+      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир. Часто пропагандировалась как выход церковной интерпретации души из тела перед смертью.",
+      backgroundClass: "hero-light-in-tunnel"
+    },
+    {
+      name: "Сонный Паралич",
+      description: "Физиологическое состояние характерное в первые секунды после выхода из \"фантомного\" мира когда мозг ещё не до конца перешёл из режима сна в режим бодрствования.",
+      backgroundClass: "hero-sleep-paralysis"
+    },
+    {
+      name: "Транс",
+      description: "Условное название ощущений, в которых человек частично осознаёт одновременно и реальный и \"фантомный\" мир",
+      backgroundClass: "hero-trance"
+    },
+    {
+      name: "Наркотический Трип",
+      description: "Условное название ощущений, в которых человек частично осознаёт одновременно и реальный и \"фантомный\" мир",
+      backgroundClass: "hero-narcotic-trip"
+    },
+    {
+      name: "Убеждения что мир что-то притягивает в нашу жизнь",
+      description: "Приписывание смешать способность мира притягивать к проблемам их решения со способностью мозга краем глаза замечать объекты которые ищет подсознание",
+      backgroundClass: "hero-attraction-law"
+    },
+    {
+      name: "Уход от реальности",
+      description: "Условное название ощущений, в которых человек частично осознаёт одновременно и реальный и \"фантомный\" мир",
+      backgroundClass: "hero-losing-reality"
+    },
+    {
+      name: "Ощущение фантомных частей тела",
+      description: "Условное название ощущений, в которых человек частично осознаёт одновременно и реальный и \"фантомный\" мир",
+      backgroundClass: "hero-phantom-limbs"
+    }
   ]
 
   setSelectedImage(val: number) {
@@ -261,7 +512,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    console.log(this.headerTabs.length)
   }
 
   initEndlessLoop() {

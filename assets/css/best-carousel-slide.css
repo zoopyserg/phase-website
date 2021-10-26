@@ -20,6 +20,198 @@ div.jumbotron.hero-technology {
   background-image: url('../../assets/img/young-college-students.jpg');
 }
 
+div.jumbotron.hero-rebreathing {
+  background-image: url('../../assets/img/rebreathing.jpg');
+}
+
+div.jumbotron.hero-astral {
+  background-image: url('../../assets/img/astral.jpg');
+}
+
+div.jumbotron.hero-astral-travel {
+  background-image: url('../../assets/img/astral-travel.jpg');
+}
+
+div.jumbotron.hero-astral-projection {
+  background-image: url('../../assets/img/astral-projection.jpg');
+}
+
+div.jumbotron.hero-autotraining {
+  background-image: url('../../assets/img/autotraining.jpg');
+}
+
+div.jumbotron.hero-affect {
+  background-image: url('../../assets/img/affect.jpg');
+}
+
+div.jumbotron.hero-god {
+  background-image: url('../../assets/img/god.jpg');
+}
+
+div.jumbotron.hero-brainstorm {
+  background-image: url('../../assets/img/brainstorm.jpg');
+}
+
+div.jumbotron.hero-rem-sleep {
+  background-image: url('../../assets/img/rem-sleep.png');
+}
+
+div.jumbotron.hero-virtual-reality {
+  background-image: url('../../assets/img/virtual-reality.jpg');
+}
+
+div.jumbotron.hero-out-of-body-travel {
+  background-image: url('../../assets/img/out-of-body-travel.jpg');
+}
+
+div.jumbotron.hero-out-of-body-experience {
+  background-image: url('../../assets/img/out-of-body-experience.jpg');
+}
+
+div.jumbotron.hero-perception {
+  background-image: url('../../assets/img/perception.jpg');
+}
+
+div.jumbotron.hero-entering-other-dimention {
+  background-image: url('../../assets/img/entering-other-dimention.jpg');
+}
+
+div.jumbotron.hero-soul-exiting-body {
+  background-image: url('../../assets/img/soul-exiting-body.jpg');
+}
+
+div.jumbotron.hero-hallucination {
+  background-image: url('../../assets/img/hallucination.jpg');
+}
+
+div.jumbotron.hero-hypnosis {
+  background-image: url('../../assets/img/hypnosis.jpg');
+}
+
+div.jumbotron.hero-dissociation {
+  background-image: url('../../assets/img/dissociation.jpg');
+}
+
+div.jumbotron.hero-dissociative-state {
+  background-image: url('../../assets/img/dissociative-state.jpg');
+}
+
+div.jumbotron.hero-soul {
+  background-image: url('../../assets/img/soul.jpg');
+}
+
+div.jumbotron.hero-signs {
+  background-image: url('../../assets/img/signs.jpg');
+}
+
+div.jumbotron.hero-changed-brain-state {
+  background-image: url('../../assets/img/changed-brain-state.jpg');
+}
+
+div.jumbotron.hero-changed-conciousness-state {
+  background-image: url('../../assets/img/changed-conciousness-state.jpg');
+}
+
+div.jumbotron.hero-illusions {
+  background-image: url('../../assets/img/illusions.jpg');
+}
+
+div.jumbotron.hero-intuition {
+  background-image: url('../../assets/img/intuition.jpg');
+}
+
+div.jumbotron.hero-histeria {
+  background-image: url('../../assets/img/histeria.jpg');
+}
+
+div.jumbotron.hero-clinical-death {
+  background-image: url('../../assets/img/clinical-death.jpg');
+}
+
+div.jumbotron.hero-false-awakening {
+  background-image: url('../../assets/img/false-awakening.jpg');
+}
+
+div.jumbotron.hero-mass-histeria {
+  background-image: url('../../assets/img/mass-histeria.jpg');
+}
+
+div.jumbotron.hero-meditation {
+  background-image: url('../../assets/img/meditation.jpg');
+}
+
+div.jumbotron.hero-mistique {
+  background-image: url('../../assets/img/mistique.jpg');
+}
+
+div.jumbotron.hero-lucid-dreams {
+  background-image: url('../../assets/img/lucid-dreams.jpg');
+}
+
+div.jumbotron.hero-parallel-reality {
+  background-image: url('../../assets/img/parallel-reality.jpg');
+}
+
+div.jumbotron.hero-alien-abduction {
+  background-image: url('../../assets/img/alien-abduction.jpg');
+}
+
+div.jumbotron.hero-forseeing {
+  background-image: url('../../assets/img/forseeing.jpg');
+}
+
+div.jumbotron.hero-nervous-breakdown {
+  background-image: url('../../assets/img/nervous-breakdown.jpg');
+}
+
+div.jumbotron.hero-nervous-convultions {
+  background-image: url('../../assets/img/nervous-convultions.jpg');
+}
+
+div.jumbotron.hero-seeing-future {
+  background-image: url('../../assets/img/seeing-future.jpg');
+}
+
+div.jumbotron.hero-psychosis {
+  background-image: url('../../assets/img/psychosis.jpg');
+}
+
+div.jumbotron.hero-self-hypnosis {
+  background-image: url('../../assets/img/self-hypnosis.jpg');
+}
+
+div.jumbotron.hero-self-collection {
+  background-image: url('../../assets/img/self-collection.jpg');
+}
+
+div.jumbotron.hero-light-in-tunnel {
+  background-image: url('../../assets/img/light-in-tunnel.jpg');
+}
+
+div.jumbotron.hero-sleep-paralysis {
+  background-image: url('../../assets/img/sleep-paralysis.jpg');
+}
+
+div.jumbotron.hero-trance {
+  background-image: url('../../assets/img/trance.jpg');
+}
+
+div.jumbotron.hero-narcotic-trip {
+  background-image: url('../../assets/img/narcotic-trip.jpg');
+}
+
+div.jumbotron.hero-attraction-law {
+  background-image: url('../../assets/img/attraction-law.jpg');
+}
+
+div.jumbotron.hero-losing-reality {
+  background-image: url('../../assets/img/losing-reality.jpg');
+}
+
+div.jumbotron.hero-phantom-limbs {
+  background-image: url('../../assets/img/phantom-limbs.png');
+}
+
 h1.hero-title, h2.hero-title, h3.hero-title {
   text-shadow: 0 3px 3px rgba(0,0,0,0.4);
   color: #fff;
