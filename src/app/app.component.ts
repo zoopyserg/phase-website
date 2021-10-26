@@ -345,29 +345,29 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 35,
+      startDesireToChange: 45,
+      endDesireToChange: 20
     },
     {
-      name: "Рассматривание / Разглядывание Деталей Вблизи",
+      name: "Рассматривание / Разглядывание Деталей Предметов Вблизи",
       description: "Без касания к предметам просто ближе на них посмотреть",
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
       endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startDesireToChange: 40,
+      endDesireToChange: 30
     },
     {
       name: "Изменение Ракурса",
-      description: "Посмотреть на фантомные предметы под другим углом, или посмотреть что за ними",
-      startDetalization: 40,
+      description: "Посмотреть на фантомные предметы под другим углом, или посмотреть что за ними и т.п.",
+      startDetalization: 30,
       endDetalization: 40,
-      startPanoramity: 40,
+      startPanoramity: 20,
       endPanoramity: 80,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startDesireToChange: 50,
+      endDesireToChange: 50
     },
     {
       name: "Ходить по пространству, Поднимать предметы и называть их",
@@ -376,198 +376,198 @@ export class AppComponent implements OnInit {
       endDetalization: 80,
       startPanoramity: 20,
       endPanoramity: 100,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startDesireToChange: 80,
+      endDesireToChange: 0
     },
     {
       name: "Понимание физиологии состояния",
       description: "Осознание что я всегда \"в фазе\", что реальный мир я никогда не видел, только его отображение моим генератором фазы.",
       startDetalization: 20,
-      endDetalization: 80,
-      startPanoramity: 20,
+      endDetalization: 40,
+      startPanoramity: 30,
       endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startDesireToChange: 80,
+      endDesireToChange: 10
     },
     {
       name: "Приказ",
       description: "Главная Техника (особенно внутри фазы). Озвучить Всем Своим Нутром И Криком Приказ (чего ты хочешь от пространства). В комбинации с Панорамной Детализацией она вообще даёт ощущение что ты бог (т.е. Приказ \"Я Вижу Каждую Деталь Этой Панорамы / Данных Обстоятельств / Данной ситуации)\").",
-      startDetalization: 20,
-      endDetalization: 40,
+      startDetalization: 50,
+      endDetalization: 50,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 70,
+      startDesireToChange: 80,
+      endDesireToChange: 0
     },
     {
       name: "Намеренье (попасть туда)",
       description: "Чёткая цель войти в фазное состояние",
-      startDetalization: 40,
-      endDetalization: 40,
-      startPanoramity: 40,
-      endPanoramity: 80,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startDetalization: 50,
+      endDetalization: 55,
+      startPanoramity: 55,
+      endPanoramity: 55,
+      startDesireToChange: 80,
+      endDesireToChange: 30
     },
     {
       name: "Вспоминание состояния",
       description: "Вспомнить каково это было быть в фазе.",
       startDetalization: 20,
-      endDetalization: 80,
-      startPanoramity: 20,
-      endPanoramity: 100,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endDetalization: 40,
+      startPanoramity: 50,
+      endPanoramity: 80,
+      startDesireToChange: 80,
+      endDesireToChange: 30
     },
     {
       name: "Вспоминание вибраций",
       description: "Вспомнить ощущение вибраций которые хоть раз были.",
       startDetalization: 20,
-      endDetalization: 80,
-      startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
+      endDetalization: 40,
+      startPanoramity: 50,
+      endPanoramity: 80,
+      startDesireToChange: 80,
       endDesireToChange: 40
     },
     {
       name: "Вспоминание проявлений техник",
       description: "Делая технику вспомнить какие эффекты она даёт.",
       startDetalization: 20,
-      endDetalization: 40,
+      endDetalization: 70,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 50,
+      startDesireToChange: 80,
+      endDesireToChange: 15
     },
     {
       name: "Техника перемещения",
-      description: "Переместиться туда куда нужно",
-      startDetalization: 40,
+      description: "Переместиться в фазном пространстве туда куда нам нужно",
+      startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 40,
       endPanoramity: 80,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startDesireToChange: 80,
+      endDesireToChange: 15
     },
     {
       name: "Техника страха",
       description: "Жутко испугаться увиденного",
       startDetalization: 20,
-      endDetalization: 80,
+      endDetalization: 100,
       startPanoramity: 20,
-      endPanoramity: 100,
+      endPanoramity: 50,
       startDesireToChange: 30,
-      endDesireToChange: 40
+      endDesireToChange: 90
     },
     {
       name: "Техника счёта",
       description: "Попытаться фантомно считать от 1 до 200 например.",
-      startDetalization: 20,
-      endDetalization: 80,
-      startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startDetalization: 50,
+      endDetalization: 50,
+      startPanoramity: 50,
+      endPanoramity: 50,
+      startDesireToChange: 90,
+      endDesireToChange: 0
     },
     {
       name: "Пытаться не заметить что я уснул, но заметить проявления фазы",
       description: "С такой формулировкой пытаться уснуть",
-      startDetalization: 20,
-      endDetalization: 40,
-      startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startDetalization: 0,
+      endDetalization: 80,
+      startPanoramity: 0,
+      endPanoramity: 80,
+      startDesireToChange: 100,
+      endDesireToChange: 0
     },
     {
       name: "Ярость",
       description: "Выдать крик ярости, крик пронизывающий всё.",
-      startDetalization: 40,
-      endDetalization: 40,
-      startPanoramity: 40,
-      endPanoramity: 80,
-      startDesireToChange: 30,
+      startDetalization: 20,
+      endDetalization: 60,
+      startPanoramity: 20,
+      endPanoramity: 60,
+      startDesireToChange: 80,
       endDesireToChange: 40
     },
     {
       name: "Поощущать Ниточки Формулирующие текущую картинку реальности. ",
       description: "Сделать такую формулировку. Будь то Приказом или другими способами.",
       startDetalization: 20,
-      endDetalization: 80,
+      endDetalization: 100,
       startPanoramity: 20,
       endPanoramity: 100,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startDesireToChange: 100,
+      endDesireToChange: 0
     },
     {
       name: "Формулировка что то что я ищу уже есть только я почему-то его не вижу",
       description: "С фразой \"там (где я не вижу - за дверью и т.п.) уже Есть (тот предмет который я ищу) только я его почему-то не вижу\" - за дверью, в коробке, там куда я не смотрю",
       startDetalization: 20,
-      endDetalization: 80,
-      startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
+      endDetalization: 40,
+      startPanoramity: 50,
+      endPanoramity: 60,
+      startDesireToChange: 70,
       endDesireToChange: 40
     },
     {
       name: "Фантомное Раскачивание",
       description: "Делать движения фантомными частями тела.",
       startDetalization: 20,
-      endDetalization: 40,
+      endDetalization: 70,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 70,
+      startDesireToChange: 90,
+      endDesireToChange: 10
     },
     {
       name: "Фантомное вращение.",
       description: "Вращаться фантомным телом вокруг какой-то из своих осей - вокруг оси Х, оси У или оси Z",
-      startDetalization: 40,
-      endDetalization: 40,
-      startPanoramity: 40,
+      startDetalization: 20,
+      endDetalization: 50,
+      startPanoramity: 20,
       endPanoramity: 80,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startDesireToChange: 70,
+      endDesireToChange: 0
     },
     {
       name: "Изменение позы с целью достичь Не-Параллельности телу",
       description: "Попытаться фантомным телом стать не параллельно своему физическому телу.",
       startDetalization: 20,
-      endDetalization: 80,
+      endDetalization: 70,
       startPanoramity: 20,
-      endPanoramity: 100,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 70,
+      startDesireToChange: 70,
+      endDesireToChange: 0
     },
     {
       name: "Выкатывание.",
       description: "Выкатиться фантомным телом из физического.",
       startDetalization: 20,
-      endDetalization: 80,
+      endDetalization: 50,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 60,
+      startDesireToChange: 50,
+      endDesireToChange: 70
     },
     {
       name: "Замах",
       description: "С замахом сделать движение фантомным телом.",
       startDetalization: 20,
-      endDetalization: 40,
+      endDetalization: 50,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 60,
+      startDesireToChange: 70,
+      endDesireToChange: 30
     },
     {
       name: "Вставание",
       description: "Просто встать",
-      startDetalization: 40,
-      endDetalization: 40,
-      startPanoramity: 40,
-      endPanoramity: 80,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startDetalization: 20,
+      endDetalization: 60,
+      startPanoramity: 20,
+      endPanoramity: 50,
+      startDesireToChange: 100,
+      endDesireToChange: 0
     },
     {
       name: "Взлёт",
@@ -576,48 +576,48 @@ export class AppComponent implements OnInit {
       endDetalization: 80,
       startPanoramity: 20,
       endPanoramity: 100,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startDesireToChange: 80,
+      endDesireToChange: 0
     },
     {
       name: "Зацеп",
       description: "Схватить фантомной рукой фантомный предмет",
       startDetalization: 20,
       endDetalization: 80,
-      startPanoramity: 20,
+      startPanoramity: 40,
       endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startDesireToChange: 100,
+      endDesireToChange: 0
     },
     {
       name: "Танец",
       description: "Потанцевать фантомным телом в фантомном пространстве",
       startDetalization: 20,
-      endDetalization: 40,
+      endDetalization: 50,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 50,
+      startDesireToChange: 100,
+      endDesireToChange: 0
     },
     {
       name: "Провалиться вниз",
       description: "Стремительно упасть куда-то вниз в фантомном пространстве",
-      startDetalization: 40,
-      endDetalization: 40,
-      startPanoramity: 40,
+      startDetalization: 60,
+      endDetalization: 10,
+      startPanoramity: 20,
       endPanoramity: 80,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startDesireToChange: 50,
+      endDesireToChange: 50
     },
     {
       name: "Кувырок через голову",
       description: "Кувыркнуться фантомным телом через фантомную голову",
       startDetalization: 20,
-      endDetalization: 80,
+      endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 100,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 50,
+      startDesireToChange: 80,
+      endDesireToChange: 30
     },
     {
       name: "Вытягивание",
@@ -625,39 +625,39 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 50,
+      startDesireToChange: 50,
+      endDesireToChange: 50
     },
     {
       name: "Идти куда мне нужно",
       description: "Пройтись по фантомному пространству фантомными ногами.",
       startDetalization: 20,
-      endDetalization: 40,
+      endDetalization: 50,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 50,
+      startDesireToChange: 80,
+      endDesireToChange: 20
     },
     {
       name: "Полёт",
       description: "Полетать по фантомному пространству",
-      startDetalization: 40,
-      endDetalization: 40,
-      startPanoramity: 40,
-      endPanoramity: 80,
-      startDesireToChange: 30,
-      endDesireToChange: 40
-    },
-    {
-      name: "Закрыть часть фантомной видимости фантомной рукой и представить что за рукой он уже есть то что мне надо. Назову это \"Божественный метод\".",
-      description: "Одна из самых эффективных техник на сегодняшний день. Почти всегда даёт гиперреализм.",
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
       endPanoramity: 100,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startDesireToChange: 80,
+      endDesireToChange: 0
+    },
+    {
+      name: "Закрыть часть фантомной видимости фантомной рукой и представить что за рукой он уже есть то что мне надо. Назову это \"Божественный метод\".",
+      description: "Одна из самых эффективных техник на сегодняшний день. Почти всегда даёт гиперреализм.",
+      startDetalization: 50,
+      endDetalization: 100,
+      startPanoramity: 40,
+      endPanoramity: 70,
+      startDesireToChange: 100,
+      endDesireToChange: 0
     },
     {
       name: "Панорамно-Детализированное Наблюдение Образов ",
@@ -665,89 +665,89 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 80,
+      startDesireToChange: 80,
+      endDesireToChange: 20
     },
     {
       name: "Наблюдение образов из центра головы",
       description: "С такой формулировкой смотреть на фантомный образ",
       startDetalization: 20,
-      endDetalization: 40,
+      endDetalization: 50,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 50,
+      startDesireToChange: 80,
+      endDesireToChange: 0
     },
     {
       name: "Визуализация",
       description: "Если образов нету - представить будто они есть",
-      startDetalization: 40,
-      endDetalization: 40,
-      startPanoramity: 40,
-      endPanoramity: 80,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startDetalization: 0,
+      endDetalization: 50,
+      startPanoramity: 20,
+      endPanoramity: 70,
+      startDesireToChange: 80,
+      endDesireToChange: 0
     },
     {
       name: "Поднимать предметы и называть их",
       description: "Одна из самых эффективных техник на сегодняшний день",
       startDetalization: 20,
-      endDetalization: 80,
+      endDetalization: 100,
       startPanoramity: 20,
       endPanoramity: 100,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startDesireToChange: 100,
+      endDesireToChange: 0
     },
     {
       name: "Инерция",
       description: "Представить что меня куда-то тянет",
       startDetalization: 20,
-      endDetalization: 80,
+      endDetalization: 50,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 50,
+      startDesireToChange: 80,
+      endDesireToChange: 0
     },
     {
       name: "Представление G-Force (вестебюлярных перепадов)",
       description: "Попытаться ощутить что меня бросает будто я в истребителе лечу",
       startDetalization: 20,
-      endDetalization: 40,
+      endDetalization: 50,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 50,
+      startDesireToChange: 80,
+      endDesireToChange: 0
     },
     {
       name: "Стремительное (скоростное) падение (полёт) вниз головой закрыв глаза.",
       description: "Стремительное (скоростное) падение (полёт) вниз головой закрыв глаза.",
-      startDetalization: 40,
-      endDetalization: 40,
-      startPanoramity: 40,
-      endPanoramity: 80,
-      startDesireToChange: 30,
+      startDetalization: 80,
+      endDetalization: 5,
+      startPanoramity: 20,
+      endPanoramity: 70,
+      startDesireToChange: 50,
       endDesireToChange: 40
     },
     {
       name: "Визуализация рук",
       description: "Представить свои руки, фантомно тереть их и т.п.",
       startDetalization: 20,
-      endDetalization: 80,
-      startPanoramity: 20,
-      endPanoramity: 100,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endDetalization: 50,
+      startPanoramity: 0,
+      endPanoramity: 30,
+      startDesireToChange: 70,
+      endDesireToChange: 10
     },
     {
       name: "Представление любого вида перемещения используя свои фантомные руки или ноги.",
       description: "Плаванье, бег, лазанье на канате, секс",
       startDetalization: 20,
-      endDetalization: 80,
+      endDetalization: 60,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 60,
+      startDesireToChange: 80,
+      endDesireToChange: 20
     },
     {
       name: "Прислушивание",
@@ -755,19 +755,19 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 40,
+      startDesireToChange: 80,
+      endDesireToChange: 0
     },
     {
       name: "Представление звуков",
       description: "Если звуков нету представить какие бы они были если бы они были",
-      startDetalization: 40,
+      startDetalization: 20,
       endDetalization: 40,
-      startPanoramity: 40,
-      endPanoramity: 80,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startPanoramity: 20,
+      endPanoramity: 40,
+      startDesireToChange: 80,
+      endDesireToChange: 0
     },
     {
       name: "Попытки услышать как МЕНЯ кто-то зовёт по имени",
@@ -783,11 +783,11 @@ export class AppComponent implements OnInit {
       name: "Звать кого-то самому",
       description: "Используя фантомный голос позвать кого-то в фантомном пространстве",
       startDetalization: 20,
-      endDetalization: 80,
+      endDetalization: 50,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 50,
+      startDesireToChange: 90,
+      endDesireToChange: 10
     },
     {
       name: "Напряжение мозга",
@@ -795,19 +795,19 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 50,
+      startDesireToChange: 50,
+      endDesireToChange: 50
     },
     {
       name: "Представление предмета в руке которой я не вижу",
       description: "Держа руку за спиной или вне поля зрения попробовать ощутить в ней нужный предмет",
-      startDetalization: 40,
-      endDetalization: 40,
+      startDetalization: 20,
+      endDetalization: 50,
       startPanoramity: 40,
-      endPanoramity: 80,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 50,
+      startDesireToChange: 80,
+      endDesireToChange: 30
     },
     {
       name: "Напряжение всего тела без напряжения мышц",
@@ -815,99 +815,99 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 100,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 20,
+      startDesireToChange: 70,
+      endDesireToChange: 30
     },
     {
       name: "Движение глаз быстро влево-вправо (физическое) ",
       description: "Реальными физическими глазами закрытыми",
       startDetalization: 20,
-      endDetalization: 80,
+      endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 40,
+      startDesireToChange: 50,
+      endDesireToChange: 10
     },
     {
       name: "Точка во лбу",
       description: "С закрытыми глазами попытаться увидеть чуть выше линии глаз точку внутри черепа",
       startDetalization: 20,
-      endDetalization: 40,
-      startPanoramity: 20,
+      endDetalization: 50,
+      startPanoramity: 30,
       endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startDesireToChange: 80,
+      endDesireToChange: 0
     },
     {
       name: "Гипервентеляция",
       description: "Перенасытить организм кислородом часто дыша.",
-      startDetalization: 40,
-      endDetalization: 40,
-      startPanoramity: 40,
-      endPanoramity: 80,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      startDetalization: 20,
+      endDetalization: 50,
+      startPanoramity: 10,
+      endPanoramity: 50,
+      startDesireToChange: 50,
+      endDesireToChange: 50
     },
     {
       name: "Представление что меня кто-то вытаскивает из тела",
       description: "Какой-то человек или существо тянет меня туда куда мне надо",
       startDetalization: 20,
-      endDetalization: 80,
+      endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 100,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 50,
+      startDesireToChange: 70,
+      endDesireToChange: 50
     },
     {
       name: "Представь что ты сейчас находишься в реальности",
       description: "Будучи в фантомном мире представить что он является реальностью",
       startDetalization: 20,
-      endDetalization: 80,
+      endDetalization: 50,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 50,
+      startDesireToChange: 100,
+      endDesireToChange: 30
     },
     {
       name: "Представление себя разделенным (например, стоящим рядом с кроватью)",
       description: "Т.е. представлять себя фантомного в том ракурсе фантомного мира в каком нужно.",
       startDetalization: 20,
-      endDetalization: 40,
+      endDetalization: 50,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 50,
+      startDesireToChange: 70,
+      endDesireToChange: 0
     },
     {
       name: "Плацебо. Предстаь, что некоторые предметы помогают тебе достичь некоторых результатов.",
       description: "Т.е. представить например напиток углубляющий состояние фазы. Или представить предмет-углублятор.",
-      startDetalization: 40,
-      endDetalization: 40,
+      startDetalization: 20,
+      endDetalization: 50,
       startPanoramity: 40,
-      endPanoramity: 80,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 50,
+      startDesireToChange: 70,
+      endDesireToChange: 0
     },
     {
       name: "Вспоминание того что не знал",
       description: "Техника попытки вспомнить что-то. Например будучи в фантомном мире попытаться вспомнить рецепт гениального и вкусного торта",
       startDetalization: 20,
-      endDetalization: 80,
+      endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 100,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 50,
+      startDesireToChange: 70,
+      endDesireToChange: 0
     },
     {
       name: "Вспоминание того что знал",
       description: "Если вспомнить в реале не получается можно попробовать вспомнить в фантомном мире. Например то что забылось ещё 20 лет назад.",
       startDetalization: 20,
-      endDetalization: 80,
+      endDetalization: 70,
       startPanoramity: 20,
-      endPanoramity: 30,
-      startDesireToChange: 30,
-      endDesireToChange: 40
+      endPanoramity: 70,
+      startDesireToChange: 90,
+      endDesireToChange: 10
     }
   ]
 
