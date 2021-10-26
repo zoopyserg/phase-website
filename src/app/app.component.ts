@@ -32,6 +32,12 @@ export class AppComponent implements OnInit {
   panoramityPropertyValue: number = 50;
   selectedImageIndex: number = 0
   endlessTimerID: any;
+  timerDetalization: any
+  timerPanoramity: any
+  endlessLoopDuration: number = 5000;
+  animationDuration: number = 3000;
+  numberAnimationStepDuration: number = 20;
+  numberAnimationStartedAt: any;
 
   detalizationProperty: PhaseProperty = {name: "Детализация", value: 50}
   panoramityProperty: PhaseProperty = {name: "Панорамность", value: 50}
@@ -97,6 +103,8 @@ export class AppComponent implements OnInit {
 
   setSelectedTechnique(val: number) {
     this.selectedTechniqueIndex = val
+    this.smoothTransitionFromAToB()
+    this.initEndlessLoop()
   }
 
   setDetalizationValue(val: number) {
@@ -109,84 +117,189 @@ export class AppComponent implements OnInit {
     this.panoramityPropertyValue = val
   }
 
+  selectedTechnique() {
+    return this.techniques[this.selectedTechniqueIndex]
+  }
+
+  selectedTechniqueStartDetalization() {
+    return this.selectedTechnique().startDetalization
+  }
+
+  selectedTechniqueEndDetalization() {
+    return this.selectedTechnique().endDetalization
+  }
+
+  selectedTechniqueStartPanoramity() {
+    return this.selectedTechnique().startPanoramity
+  }
+
+  selectedTechniqueEndPanoramity() {
+    return this.selectedTechnique().endPanoramity
+  }
+
+  selectedTechniqueDetalizationDifference() {
+    return this.selectedTechniqueEndDetalization() - this.selectedTechniqueStartDetalization()
+  }
+
+  selectedTechniquePanoramityDifference() {
+    return this.selectedTechniqueEndPanoramity() - this.selectedTechniqueStartPanoramity()
+  }
+
+  selectedTechniqueDetalizationChange() {
+    return Math.abs(this.selectedTechniqueDetalizationDifference())
+  }
+
+  selectedTechniquePanoramityChange() {
+    return Math.abs(this.selectedTechniquePanoramityDifference())
+  }
+
   smoothTransitionFromAToB() {
+    console.log("a to b start")
+    this.clearTimerPanoramity()
+    this.clearTimerDetalization()
+
     if (this.selectedTechniqueIndex > 0) {
-      var technique = this.techniques[this.selectedTechniqueIndex]
-      this.detalizationProperty.value = technique.startDetalization
-      this.detalizationPropertyValue = technique.startDetalization
-      this.panoramityProperty.value = technique.startPanoramity
-      this.panoramityPropertyValue = technique.startPanoramity
+      this.detalizationProperty.value = this.selectedTechniqueStartDetalization()
+      this.detalizationPropertyValue = this.selectedTechniqueStartDetalization()
+      this.panoramityProperty.value = this.selectedTechniqueStartPanoramity()
+      this.panoramityPropertyValue = this.selectedTechniqueStartPanoramity()
+      this.numberAnimationStartedAt = Date.now()
 
-      var animationDuration = 3000;
-
-      var detalizationDifference = technique.endDetalization - technique.startDetalization
-      var panoramityDifference = technique.endPanoramity - technique.startPanoramity
-
-      var detalizationChange = Math.abs(detalizationDifference)
-      var panoramityChange = Math.abs(panoramityDifference)
-
-      var detalizationStepDuration = Math.floor(animationDuration / detalizationChange)
-      var panoramityStepDuration = Math.floor(animationDuration / panoramityChange)
-
-      var detalizationStep = detalizationDifference / detalizationStepDuration
-      var panoramityStep = panoramityDifference / panoramityStepDuration
-
-      let start = Date.now()
-
-      let timerDetalization = setInterval(() => {
-        // how much time passed from the start?
-        let timePassed1 = Date.now() - start;
-
-        if (timePassed1 >= animationDuration) {
-          clearInterval(timerDetalization); // finish the animation after 2 seconds
-          return;
-        }
-
-        // draw the animation at the moment timePassed
-        this.animateDetalizationNumber(technique.startDetalization, technique.endDetalization, timePassed1);
-
-      }, detalizationStepDuration);
-
-      let timerPanoramity = setInterval(() => {
-        // how much time passed from the start?
-        let timePassed2 = Date.now() - start;
-
-        if (timePassed2 >= animationDuration) {
-          clearInterval(timerPanoramity); // finish the animation after 2 seconds
-          return;
-        }
-
-        // draw the animation at the moment timePassed
-        this.animatePanoramityNumber(technique.startPanoramity, technique.endPanoramity, timePassed2);
-
-      }, panoramityStepDuration);
-
+      this.initPanoramitySmoothTimer()
+      this.initDetalizationSmoothTimer()
     }
   }
 
-  animateDetalizationNumber(startNumber: any, endNumber: any, timePassed: any) {
-    if (Math.abs(endNumber - this.detalizationPropertyValue) > 0) {
-      this.detalizationProperty.value = this.detalizationProperty.value + ((endNumber - startNumber) / 5000) * timePassed
-      this.detalizationPropertyValue = this.detalizationPropertyValue + ((endNumber - startNumber) / 5000) * timePassed
+  initPanoramitySmoothTimer() {
+    if (!(this.timerPanoramity)) {
+      this.timerPanoramity = setInterval(() => {
+        this.panoramityClearTimerOrAnimate()
+      }, this.numberAnimationStepDuration);
     }
   }
 
-  animatePanoramityNumber(startNumber: any, endNumber: any, timePassed: any) {
-    if (Math.abs(endNumber - this.panoramityPropertyValue) > 0) {
-      this.panoramityProperty.value = this.panoramityProperty.value + ((endNumber - startNumber) / 5000) * timePassed
-      this.panoramityPropertyValue = this.panoramityPropertyValue + ((endNumber - startNumber) / 5000) * timePassed
+  initDetalizationSmoothTimer() {
+    if (!(this.timerDetalization)) {
+      this.timerDetalization = setInterval(() => {
+        this.detalizationClearTimerOrAnimate()
+      }, this.numberAnimationStepDuration);
+    }
+  }
+
+  detalizationClearTimerOrAnimate() {
+    if (this.didTimePass()) {
+      this.clearTimerDetalization()
+    } else {
+      this.animateDetalizationNumber();
+    }
+  }
+
+  panoramityClearTimerOrAnimate() {
+    if (this.didTimePass()) {
+      this.clearTimerPanoramity()
+    } else {
+      this.animatePanoramityNumber();
+    }
+  }
+
+  timePassed() {
+    return Date.now() - this.numberAnimationStartedAt
+  }
+
+  didTimePass() {
+    return (this.timePassed()) >= this.animationDuration
+  }
+
+  detalizationIsGrowing() {
+    return this.selectedTechniqueStartDetalization() < this.selectedTechniqueEndDetalization()
+  }
+
+  detalizationIsFalling() {
+    return this.selectedTechniqueStartDetalization() > this.selectedTechniqueEndDetalization()
+  }
+
+  panoramityIsGrowing() {
+    return this.selectedTechniqueStartPanoramity() < this.selectedTechniqueEndPanoramity()
+  }
+
+  panoramityIsFalling() {
+    return this.selectedTechniqueStartPanoramity() > this.selectedTechniqueEndPanoramity()
+  }
+
+  detalizationValueReachedEndDetalization() {
+    if (this.detalizationIsGrowing()) {
+      return this.detalizationPropertyValue >= this.selectedTechniqueEndDetalization()
+    } else if (this.detalizationIsFalling()) {
+      return this.detalizationPropertyValue <= this.selectedTechniqueEndDetalization()
+    } else {
+      return true // endDetalization() == StartDetalization()
+    }
+  }
+
+  panoramityValueReachedEndPanoramity() {
+    if (this.panoramityIsGrowing()) {
+      return this.panoramityPropertyValue >= this.selectedTechniqueEndPanoramity()
+    } else if (this.panoramityIsFalling()) {
+      return this.panoramityPropertyValue <= this.selectedTechniqueEndPanoramity()
+    } else {
+      return true // EndPanoramity() == StartPanoramity()
+    }
+  }
+
+  animateDetalizationNumber() {
+    if (!(this.detalizationValueReachedEndDetalization())) {
+      this.detalizationProperty.value = this.selectedTechniqueStartDetalization() + (this.selectedTechniqueDetalizationDifference() / this.animationDuration) * this.timePassed()
+      this.detalizationPropertyValue = this.selectedTechniqueStartDetalization() + (this.selectedTechniqueDetalizationDifference() / this.animationDuration) * this.timePassed()
+    }
+  }
+
+  animatePanoramityNumber() {
+    if (!(this.panoramityValueReachedEndPanoramity())) {
+      this.panoramityProperty.value = this.selectedTechniqueStartPanoramity() + (this.selectedTechniquePanoramityDifference() / this.animationDuration) * this.timePassed()
+      this.panoramityPropertyValue = this.selectedTechniqueStartPanoramity() + (this.selectedTechniquePanoramityDifference() / this.animationDuration) * this.timePassed()
     }
   }
 
   ngOnInit() {
-    this.endlessTimerID = setInterval(() => {
-      this.smoothTransitionFromAToB()
-    }, 5000);
+
+  }
+
+  initEndlessLoop() {
+    if (!(this.endlessTimerID)) {
+      this.endlessTimerID = setInterval(() => {
+        this.smoothTransitionFromAToB()
+      }, this.endlessLoopDuration);
+    }
   }
 
   ngOnDestroy() {
+    this.clearAllTimers()
+  }
+
+  clearAllTimers() {
+    this.clearEndlessLoop()
+    this.clearTimerDetalization()
+    this.clearTimerPanoramity()
+  }
+
+  clearTimerPanoramity() {
+    if (this.timerPanoramity) {
+      clearInterval(this.timerPanoramity);
+      this.timerPanoramity = null
+    }
+  }
+
+  clearTimerDetalization() {
+    if (this.timerDetalization) {
+      clearInterval(this.timerDetalization);
+      this.timerDetalization = null
+    }
+  }
+
+  clearEndlessLoop() {
     if (this.endlessTimerID) {
       clearInterval(this.endlessTimerID);
+      this.endlessTimerID = null;
     }
   }
 
