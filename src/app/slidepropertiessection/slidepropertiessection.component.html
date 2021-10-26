@@ -4,9 +4,20 @@
       <h6 class="text-primary fw-bold m-0">Компоненты</h6>
     </div>
     <div class="card-body">
-      <app-property-slider [phaseProperty]="detalizationProperty" (onPropertyChanged)="setDetalizationValue($event)"></app-property-slider>
-      <app-property-slider [phaseProperty]="panoramityProperty" (onPropertyChanged)="setPanoramityValue($event)"></app-property-slider>
-      <app-property-slider [phaseProperty]="wishToChangeProperty"></app-property-slider>
+      <app-property-slider
+        [phaseProperty]="detalizationProperty"
+        (onPropertyChanged)="setDetalizationValue($event)"
+        [selectedTechniqueIndex]="selectedTechniqueIndex"
+      ></app-property-slider>
+      <app-property-slider
+        [phaseProperty]="panoramityProperty"
+        (onPropertyChanged)="setPanoramityValue($event)"
+        [selectedTechniqueIndex]="selectedTechniqueIndex"
+      ></app-property-slider>
+      <app-property-slider
+        [phaseProperty]="wishToChangeProperty"
+        [selectedTechniqueIndex]="selectedTechniqueIndex"
+      ></app-property-slider>
     </div>
   </div>
 </div>

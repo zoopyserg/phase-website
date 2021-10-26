@@ -12,6 +12,7 @@ export class SlidepropertiessectionComponent implements OnInit {
   @Input() detalizationProperty: any
   @Input() panoramityProperty: any
   @Input() wishToChangeProperty: any
+  @Input() selectedTechniqueIndex: any
   @Output() onDetalizationPropertyChanged = new EventEmitter<number>();
   @Output() onPanoramityPropertyChanged = new EventEmitter<number>();
 
