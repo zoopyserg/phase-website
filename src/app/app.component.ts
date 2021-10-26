@@ -11,7 +11,6 @@ export interface HeaderTab {
   backgroundClass: string
 }
 
-
 export interface ImageName {
   name: string
   filename: string
@@ -928,6 +927,7 @@ export class AppComponent implements OnInit {
   }
 
   setDesireToChangeValue(val: number) {
+    console.log('changing to' + val)
     this.desireToChangeProperty.value = val
     this.desireToChangePropertyValue = val
   }

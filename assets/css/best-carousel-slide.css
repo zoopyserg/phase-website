@@ -212,7 +212,7 @@ div.jumbotron.hero-phantom-limbs {
   background-image: url('../../assets/img/phantom-limbs.png');
 }
 
-h1.hero-title, h2.hero-title, h3.hero-title {
+p.hero-title, h1.hero-title, h2.hero-title, h3.hero-title {
   text-shadow: 0 3px 3px rgba(0,0,0,0.5);
   color: #fff;
 }
@@ -222,7 +222,7 @@ p.hero-subtitle {
   margin: 25px auto;
   padding: 10px 15px;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 1rem;
 }
 
