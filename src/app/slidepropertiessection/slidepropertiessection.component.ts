@@ -11,10 +11,11 @@ import {PropertySliderComponent} from "../property-slider/property-slider.compon
 export class SlidepropertiessectionComponent implements OnInit {
   @Input() detalizationProperty: any
   @Input() panoramityProperty: any
-  @Input() wishToChangeProperty: any
+  @Input() desireToChangeProperty: any
   @Input() selectedTechniqueIndex: any
   @Output() onDetalizationPropertyChanged = new EventEmitter<number>();
   @Output() onPanoramityPropertyChanged = new EventEmitter<number>();
+  @Output() onDesireToChangePropertyChanged = new EventEmitter<number>();
 
   constructor() { }
 
@@ -27,5 +28,9 @@ export class SlidepropertiessectionComponent implements OnInit {
 
   setPanoramityValue(event: any) {
     this.onPanoramityPropertyChanged.emit(event)
+  }
+
+  setDesireToChangeValue(event: any) {
+    this.onDesireToChangePropertyChanged.emit(event)
   }
 }

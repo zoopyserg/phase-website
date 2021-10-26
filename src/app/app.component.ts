@@ -24,6 +24,8 @@ export interface Technique {
   endDetalization: number
   startPanoramity: number
   endPanoramity: number
+  startDesireToChange: number
+  endDesireToChange: number
 }
 
 @Component({
@@ -37,10 +39,12 @@ export class AppComponent implements OnInit {
   selectedTechniqueIndex: number = 0
   detalizationPropertyValue: number = 50;
   panoramityPropertyValue: number = 50;
+  desireToChangePropertyValue: number = 50;
   selectedImageIndex: number = 0
   endlessTimerID: any;
   timerDetalization: any
   timerPanoramity: any
+  timerDesireToChange: any
   endlessLoopDuration: number = 5000;
   animationDuration: number = 3000;
   numberAnimationStepDuration: number = 20;
@@ -52,7 +56,7 @@ export class AppComponent implements OnInit {
 
   detalizationProperty: PhaseProperty = {name: "Детализация", value: 50}
   panoramityProperty: PhaseProperty = {name: "Панорамность", value: 50}
-  wishToChangeProperty: PhaseProperty = {name: "Желание Изменить Картинку", value: 50}
+  desireToChangeProperty: PhaseProperty = {name: "Желание Изменить Картинку", value: 50}
 
   imageNames: ImageName[] = [
     {name: "Лес", filename: "forest.jpg"},
@@ -331,7 +335,9 @@ export class AppComponent implements OnInit {
       startDetalization: this.detalizationPropertyValue,
       endDetalization: this.detalizationPropertyValue,
       startPanoramity: this.panoramityPropertyValue,
-      endPanoramity: this.panoramityPropertyValue
+      endPanoramity: this.panoramityPropertyValue,
+      startDesireToChange: this.desireToChangePropertyValue,
+      endDesireToChange: this.desireToChangePropertyValue
     },
     {
       name: "Сенсоризация (Сенсорно Моторная Визуализация)",
@@ -339,7 +345,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Рассматривание / Разглядывание Деталей Вблизи",
@@ -347,7 +355,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Изменение Ракурса",
@@ -355,7 +365,9 @@ export class AppComponent implements OnInit {
       startDetalization: 40,
       endDetalization: 40,
       startPanoramity: 40,
-      endPanoramity: 80
+      endPanoramity: 80,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Ходить по пространству, Поднимать предметы и называть их",
@@ -363,7 +375,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 100
+      endPanoramity: 100,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Понимание физиологии состояния",
@@ -371,7 +385,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Приказ",
@@ -379,7 +395,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Намеренье (попасть туда)",
@@ -387,7 +405,9 @@ export class AppComponent implements OnInit {
       startDetalization: 40,
       endDetalization: 40,
       startPanoramity: 40,
-      endPanoramity: 80
+      endPanoramity: 80,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Вспоминание состояния",
@@ -395,7 +415,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 100
+      endPanoramity: 100,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Вспоминание вибраций",
@@ -403,7 +425,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Вспоминание проявлений техник",
@@ -411,7 +435,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Техника перемещения",
@@ -419,7 +445,9 @@ export class AppComponent implements OnInit {
       startDetalization: 40,
       endDetalization: 40,
       startPanoramity: 40,
-      endPanoramity: 80
+      endPanoramity: 80,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Техника страха",
@@ -427,7 +455,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 100
+      endPanoramity: 100,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Техника счёта",
@@ -435,7 +465,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Пытаться не заметить что я уснул, но заметить проявления фазы",
@@ -443,7 +475,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Ярость",
@@ -451,7 +485,9 @@ export class AppComponent implements OnInit {
       startDetalization: 40,
       endDetalization: 40,
       startPanoramity: 40,
-      endPanoramity: 80
+      endPanoramity: 80,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Поощущать Ниточки Формулирующие текущую картинку реальности. ",
@@ -459,7 +495,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 100
+      endPanoramity: 100,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Формулировка что то что я ищу уже есть только я почему-то его не вижу",
@@ -467,7 +505,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Фантомное Раскачивание",
@@ -475,7 +515,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Фантомное вращение.",
@@ -483,7 +525,9 @@ export class AppComponent implements OnInit {
       startDetalization: 40,
       endDetalization: 40,
       startPanoramity: 40,
-      endPanoramity: 80
+      endPanoramity: 80,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Изменение позы с целью достичь Не-Параллельности телу",
@@ -491,7 +535,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 100
+      endPanoramity: 100,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Выкатывание.",
@@ -499,7 +545,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Замах",
@@ -507,7 +555,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Вставание",
@@ -515,7 +565,9 @@ export class AppComponent implements OnInit {
       startDetalization: 40,
       endDetalization: 40,
       startPanoramity: 40,
-      endPanoramity: 80
+      endPanoramity: 80,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Взлёт",
@@ -523,7 +575,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 100
+      endPanoramity: 100,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Зацеп",
@@ -531,7 +585,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Танец",
@@ -539,7 +595,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Провалиться вниз",
@@ -547,7 +605,9 @@ export class AppComponent implements OnInit {
       startDetalization: 40,
       endDetalization: 40,
       startPanoramity: 40,
-      endPanoramity: 80
+      endPanoramity: 80,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Кувырок через голову",
@@ -555,7 +615,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 100
+      endPanoramity: 100,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Вытягивание",
@@ -563,7 +625,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Идти куда мне нужно",
@@ -571,7 +635,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Полёт",
@@ -579,7 +645,9 @@ export class AppComponent implements OnInit {
       startDetalization: 40,
       endDetalization: 40,
       startPanoramity: 40,
-      endPanoramity: 80
+      endPanoramity: 80,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Закрыть часть фантомной видимости фантомной рукой и представить что за рукой он уже есть то что мне надо. Назову это \"Божественный метод\".",
@@ -587,7 +655,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 100
+      endPanoramity: 100,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Панорамно-Детализированное Наблюдение Образов ",
@@ -595,7 +665,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Наблюдение образов из центра головы",
@@ -603,7 +675,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Визуализация",
@@ -611,7 +685,9 @@ export class AppComponent implements OnInit {
       startDetalization: 40,
       endDetalization: 40,
       startPanoramity: 40,
-      endPanoramity: 80
+      endPanoramity: 80,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Поднимать предметы и называть их",
@@ -619,7 +695,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 100
+      endPanoramity: 100,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Инерция",
@@ -627,7 +705,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Представление G-Force (вестебюлярных перепадов)",
@@ -635,7 +715,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Стремительное (скоростное) падение (полёт) вниз головой закрыв глаза.",
@@ -643,7 +725,9 @@ export class AppComponent implements OnInit {
       startDetalization: 40,
       endDetalization: 40,
       startPanoramity: 40,
-      endPanoramity: 80
+      endPanoramity: 80,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Визуализация рук",
@@ -651,7 +735,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 100
+      endPanoramity: 100,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Представление любого вида перемещения используя свои фантомные руки или ноги.",
@@ -659,7 +745,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Прислушивание",
@@ -667,7 +755,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Представление звуков",
@@ -675,7 +765,9 @@ export class AppComponent implements OnInit {
       startDetalization: 40,
       endDetalization: 40,
       startPanoramity: 40,
-      endPanoramity: 80
+      endPanoramity: 80,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Попытки услышать как МЕНЯ кто-то зовёт по имени",
@@ -683,7 +775,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 100
+      endPanoramity: 100,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Звать кого-то самому",
@@ -691,7 +785,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Напряжение мозга",
@@ -699,7 +795,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Представление предмета в руке которой я не вижу",
@@ -707,7 +805,9 @@ export class AppComponent implements OnInit {
       startDetalization: 40,
       endDetalization: 40,
       startPanoramity: 40,
-      endPanoramity: 80
+      endPanoramity: 80,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Напряжение всего тела без напряжения мышц",
@@ -715,7 +815,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 100
+      endPanoramity: 100,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Движение глаз быстро влево-вправо (физическое) ",
@@ -723,7 +825,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Точка во лбу",
@@ -731,7 +835,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Гипервентеляция",
@@ -739,7 +845,9 @@ export class AppComponent implements OnInit {
       startDetalization: 40,
       endDetalization: 40,
       startPanoramity: 40,
-      endPanoramity: 80
+      endPanoramity: 80,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Представление что меня кто-то вытаскивает из тела",
@@ -747,7 +855,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 100
+      endPanoramity: 100,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Представь что ты сейчас находишься в реальности",
@@ -755,7 +865,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Представление себя разделенным (например, стоящим рядом с кроватью)",
@@ -763,7 +875,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 40,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Плацебо. Предстаь, что некоторые предметы помогают тебе достичь некоторых результатов.",
@@ -771,7 +885,9 @@ export class AppComponent implements OnInit {
       startDetalization: 40,
       endDetalization: 40,
       startPanoramity: 40,
-      endPanoramity: 80
+      endPanoramity: 80,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Вспоминание того что не знал",
@@ -779,7 +895,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 100
+      endPanoramity: 100,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     },
     {
       name: "Вспоминание того что знал",
@@ -787,7 +905,9 @@ export class AppComponent implements OnInit {
       startDetalization: 20,
       endDetalization: 80,
       startPanoramity: 20,
-      endPanoramity: 30
+      endPanoramity: 30,
+      startDesireToChange: 30,
+      endDesireToChange: 40
     }
   ]
 
@@ -807,6 +927,11 @@ export class AppComponent implements OnInit {
     this.panoramityPropertyValue = val
   }
 
+  setDesireToChangeValue(val: number) {
+    this.desireToChangeProperty.value = val
+    this.desireToChangePropertyValue = val
+  }
+
   selectedTechnique() {
     return this.techniques[this.selectedTechniqueIndex]
   }
@@ -817,6 +942,14 @@ export class AppComponent implements OnInit {
 
   selectedTechniqueEndDetalization() {
     return this.selectedTechnique().endDetalization
+  }
+
+  selectedTechniqueStartDesireToChange() {
+    return this.selectedTechnique().startDesireToChange
+  }
+
+  selectedTechniqueEndDesireToChange() {
+    return this.selectedTechnique().endDesireToChange
   }
 
   selectedTechniqueStartPanoramity() {
@@ -835,28 +968,28 @@ export class AppComponent implements OnInit {
     return this.selectedTechniqueEndPanoramity() - this.selectedTechniqueStartPanoramity()
   }
 
-  selectedTechniqueDetalizationChange() {
-    return Math.abs(this.selectedTechniqueDetalizationDifference())
-  }
-
-  selectedTechniquePanoramityChange() {
-    return Math.abs(this.selectedTechniquePanoramityDifference())
+  selectedTechniqueDesireToChangeDifference() {
+    return this.selectedTechniqueEndDesireToChange() - this.selectedTechniqueStartDesireToChange()
   }
 
   smoothTransitionFromAToB() {
-    console.log("a to b start")
     this.clearTimerPanoramity()
     this.clearTimerDetalization()
+    this.clearTimerDesireToChange()
 
     if (this.selectedTechniqueIndex > 0) {
       this.detalizationProperty.value = this.selectedTechniqueStartDetalization()
       this.detalizationPropertyValue = this.selectedTechniqueStartDetalization()
       this.panoramityProperty.value = this.selectedTechniqueStartPanoramity()
       this.panoramityPropertyValue = this.selectedTechniqueStartPanoramity()
+      this.desireToChangeProperty.value = this.selectedTechniqueStartDesireToChange()
+      this.desireToChangePropertyValue = this.selectedTechniqueStartDesireToChange()
+
       this.numberAnimationStartedAt = Date.now()
 
       this.initPanoramitySmoothTimer()
       this.initDetalizationSmoothTimer()
+      this.initDesireToChangeSmoothTimer()
     }
   }
 
@@ -876,6 +1009,14 @@ export class AppComponent implements OnInit {
     }
   }
 
+  initDesireToChangeSmoothTimer() {
+    if (!(this.timerDesireToChange)) {
+      this.timerDesireToChange = setInterval(() => {
+        this.desireToChangeClearTimerOrAnimate()
+      }, this.numberAnimationStepDuration);
+    }
+  }
+
   detalizationClearTimerOrAnimate() {
     if (this.didTimePass()) {
       this.clearTimerDetalization()
@@ -889,6 +1030,14 @@ export class AppComponent implements OnInit {
       this.clearTimerPanoramity()
     } else {
       this.animatePanoramityNumber();
+    }
+  }
+
+  desireToChangeClearTimerOrAnimate() {
+    if (this.didTimePass()) {
+      this.clearTimerDesireToChange()
+    } else {
+      this.animateDesireToChangeNumber();
     }
   }
 
@@ -916,6 +1065,14 @@ export class AppComponent implements OnInit {
     return this.selectedTechniqueStartPanoramity() > this.selectedTechniqueEndPanoramity()
   }
 
+  desireToChangeIsGrowing() {
+    return this.selectedTechniqueStartDesireToChange() < this.selectedTechniqueEndDesireToChange()
+  }
+
+  desireToChangeIsFalling() {
+    return this.selectedTechniqueStartDesireToChange() > this.selectedTechniqueEndDesireToChange()
+  }
+
   detalizationValueReachedEndDetalization() {
     if (this.detalizationIsGrowing()) {
       return this.detalizationPropertyValue >= this.selectedTechniqueEndDetalization()
@@ -936,6 +1093,16 @@ export class AppComponent implements OnInit {
     }
   }
 
+  desireToChangeValueReachedEndDesireToChange() {
+    if (this.desireToChangeIsGrowing()) {
+      return this.desireToChangePropertyValue >= this.selectedTechniqueEndDesireToChange()
+    } else if (this.desireToChangeIsFalling()) {
+      return this.desireToChangePropertyValue <= this.selectedTechniqueEndDesireToChange()
+    } else {
+      return true // endDetalization() == StartDetalization()
+    }
+  }
+
   animateDetalizationNumber() {
     if (!(this.detalizationValueReachedEndDetalization())) {
       this.detalizationProperty.value = this.selectedTechniqueStartDetalization() + (this.selectedTechniqueDetalizationDifference() / this.animationDuration) * this.timePassed()
@@ -947,6 +1114,13 @@ export class AppComponent implements OnInit {
     if (!(this.panoramityValueReachedEndPanoramity())) {
       this.panoramityProperty.value = this.selectedTechniqueStartPanoramity() + (this.selectedTechniquePanoramityDifference() / this.animationDuration) * this.timePassed()
       this.panoramityPropertyValue = this.selectedTechniqueStartPanoramity() + (this.selectedTechniquePanoramityDifference() / this.animationDuration) * this.timePassed()
+    }
+  }
+
+  animateDesireToChangeNumber() {
+    if (!(this.desireToChangeValueReachedEndDesireToChange())) {
+      this.desireToChangeProperty.value = this.selectedTechniqueStartDesireToChange() + (this.selectedTechniqueDesireToChangeDifference() / this.animationDuration) * this.timePassed()
+      this.desireToChangePropertyValue = this.selectedTechniqueStartDesireToChange() + (this.selectedTechniqueDesireToChangeDifference() / this.animationDuration) * this.timePassed()
     }
   }
 
@@ -982,6 +1156,7 @@ export class AppComponent implements OnInit {
     this.clearEndlessLoop()
     this.clearTimerDetalization()
     this.clearTimerPanoramity()
+    this.clearTimerDesireToChange()
     this.clearHeaderTabLoop()
   }
 
@@ -996,6 +1171,13 @@ export class AppComponent implements OnInit {
     if (this.timerDetalization) {
       clearInterval(this.timerDetalization);
       this.timerDetalization = null
+    }
+  }
+
+  clearTimerDesireToChange() {
+    if (this.timerDesireToChange) {
+      clearInterval(this.timerDesireToChange);
+      this.timerDesireToChange = null
     }
   }
 

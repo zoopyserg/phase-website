@@ -9,7 +9,7 @@ import {Component, ElementRef, Input, Directive, ViewChild, AfterViewInit } from
 export class ChartsectionComponent implements AfterViewInit {
   @Input() detalizationProperty: any
   @Input() panoramityProperty: any
-  @Input() wishToChangeProperty: any
+  @Input() desireToChangeProperty: any
   @Input() imageNames: any
   @Input() techniques: any
   @Input() selectedTechniqueIndex: any

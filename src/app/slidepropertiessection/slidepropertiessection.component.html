@@ -15,8 +15,9 @@
         [selectedTechniqueIndex]="selectedTechniqueIndex"
       ></app-property-slider>
       <app-property-slider
-        [phaseProperty]="wishToChangeProperty"
+        [phaseProperty]="desireToChangeProperty"
         [selectedTechniqueIndex]="selectedTechniqueIndex"
+        (onPropertyChanged)="setDesireToChangeValue($event)"
       ></app-property-slider>
     </div>
   </div>
