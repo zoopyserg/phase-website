@@ -2,8 +2,9 @@
   <div class="card-header py-3">
     <h6 class="text-primary fw-bold m-0">Техники</h6>
     <p>При выборе техники на слайдерах будет показан ожидаемый эффект от неё. Используя техники на засыпании после прерванного сна можно исползовать их для входа в фазное состояние. Используя техники уже внутри фазы можно использовать их для получения нужного состояния фазы (повышать реализм и прочее). При выборе техники возможность вручную редактировать Панорамность и Детализацию на слайдерах будет отключена, пока не включите снова опцию (Технику Не Выбрано)</p>
+    <input type="text" class="form-control" [(ngModel)]="searchValue" placeholder="Поиск">
   </div>
   <ul class="list-group list-group-flush">
-    <app-technique-name *ngFor="let technique of finalTechniques();" [technique]="technique" [selectedTechniqueIndex]="selectedTechniqueIndex" (onSelectedTechniqueChange)="setSelectedTechnique($event)"></app-technique-name>
+    <app-technique-name *ngFor="let technique of finalSearchedTechniques();" [technique]="technique" [selectedTechniqueIndex]="selectedTechniqueIndex" (onSelectedTechniqueChange)="setSelectedTechnique($event)"></app-technique-name>
   </ul>
 </div>

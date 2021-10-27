@@ -11,6 +11,8 @@ export class SelecttechniquesectionComponent implements OnInit {
   @Input() selectedTechniqueIndex: any
   @Output() onSelectedTechniqueChange = new EventEmitter<number>();
 
+  searchValue: string = ""
+
   constructor() { }
 
   ngOnInit(): void {
@@ -37,10 +39,17 @@ export class SelecttechniquesectionComponent implements OnInit {
   }
 
   finalTechniques() {
-    console.log('start')
-    console.log(this.firstTechnique())
-    console.log(this.sortedTechniques())
-    console.log([[this.firstTechnique()], this.sortedTechniques()].reduce((acc, val) => acc.concat(val), []))
     return [this.firstTechnique(), this.sortedTechniques()].reduce((acc, val) => acc.concat(val), [])
+  }
+
+  finalSearchedTechniques() {
+    if (this.searchValue == "") {
+      return this.finalTechniques()
+    } else {
+      var regex = new RegExp('.*' + this.searchValue + '.*', 'gi')
+      return this.finalTechniques().filter((technique: Technique) : any => {
+        return technique.name.match(regex)
+      })
+    }
   }
 }
