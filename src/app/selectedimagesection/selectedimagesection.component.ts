@@ -47,6 +47,18 @@ export class SelectedimagesectionComponent implements AfterViewInit {
     this.drawImage()
   }
 
+  selectedTechnique() {
+    return this.techniques.find((technique: any, index: any) : any => {
+      if (technique.id == this.selectedTechniqueIndex) {
+        return true
+      }
+    })
+  }
+
+  selectedTechniqueName() {
+    return this.selectedTechnique().name
+  }
+
   constructor() {
 
   }

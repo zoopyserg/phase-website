@@ -1,6 +1,9 @@
 <div class="card shadow mb-4" id="selectedImageDemo">
-  <div class="card-header d-flex justify-content-between align-items-center">
+  <div class="card-header align-items-center">
     <h6 class="text-primary fw-bold m-0">Картинка</h6>
+    <p class="my-0" *ngIf="selectedTechniqueIndex != 0">
+      Демонстрация ожидаемого эффекта от техники <strong>{{selectedTechniqueName()}}</strong>
+    </p>
   </div>
   <div class="card-body">
     <canvas class="w-100" #myCanvas > </canvas>
