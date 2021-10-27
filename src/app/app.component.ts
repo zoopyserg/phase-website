@@ -17,6 +17,7 @@ export interface ImageName {
 }
 
 export interface Technique {
+  id: number
   name: string
   description: string
   tutorialUrl: any
@@ -330,6 +331,7 @@ export class AppComponent implements OnInit {
 
   techniques: Technique[] = [
     {
+      id: 0,
       name: "(технику не выбрано)",
       description: "Выберите технику чтоб увидеть её эффект",
       tutorialUrl: null,
@@ -341,6 +343,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: this.desireToChangePropertyValue
     },
     {
+      id: 1,
       name: "Сенсоризация (Сенсорно Моторная Визуализация)",
       description: "Быстрое но внимательное ощупывание плюс рассматривание вблизи",
       tutorialUrl: null,
@@ -352,6 +355,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 20
     },
     {
+      id: 2,
       name: "Рассматривание / Разглядывание Деталей Предметов Вблизи",
       description: "Без касания к предметам просто ближе на них посмотреть",
       tutorialUrl: null,
@@ -363,6 +367,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 30
     },
     {
+      id: 3,
       name: "Изменение Ракурса",
       description: "Посмотреть на фантомные предметы под другим углом, или посмотреть что за ними и т.п.",
       tutorialUrl: null,
@@ -374,6 +379,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 50
     },
     {
+      id: 4,
       name: "Ходить по пространству, Поднимать предметы и называть их",
       description: "Одна из самых эффективных техник на сегодняшний день",
       tutorialUrl: null,
@@ -385,6 +391,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 5,
       name: "Понимание физиологии состояния",
       description: "Осознание что я всегда \"в фазе\", что реальный мир я никогда не видел, только его отображение моим генератором фазы.",
       tutorialUrl: null,
@@ -396,6 +403,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 10
     },
     {
+      id: 6,
       name: "Приказ",
       description: "Главная Техника (особенно внутри фазы). Озвучить Всем Своим Нутром И Криком Приказ (чего ты хочешь от пространства). В комбинации с Панорамной Детализацией она вообще даёт ощущение что ты бог (т.е. Приказ \"Я Вижу Каждую Деталь Этой Панорамы / Данных Обстоятельств / Данной ситуации)\").",
       tutorialUrl: null,
@@ -407,6 +415,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 7,
       name: "Намеренье (попасть туда)",
       description: "Чёткая цель войти в фазное состояние",
       tutorialUrl: null,
@@ -418,6 +427,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 30
     },
     {
+      id: 8,
       name: "Вспоминание состояния",
       description: "Вспомнить каково это было быть в фазе.",
       tutorialUrl: null,
@@ -429,6 +439,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 30
     },
     {
+      id: 9,
       name: "Вспоминание вибраций",
       description: "Вспомнить ощущение вибраций которые хоть раз были.",
       tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=276s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
@@ -440,6 +451,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 40
     },
     {
+      id: 10,
       name: "Вспоминание проявлений техник",
       description: "Делая технику вспомнить какие эффекты она даёт.",
       tutorialUrl: null,
@@ -451,6 +463,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 15
     },
     {
+      id: 11,
       name: "Техника перемещения",
       description: "Переместиться в фазном пространстве туда куда нам нужно",
       tutorialUrl: null,
@@ -462,6 +475,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 15
     },
     {
+      id: 12,
       name: "Техника страха",
       description: "Жутко испугаться увиденного",
       tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=445s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
@@ -473,6 +487,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 90
     },
     {
+      id: 13,
       name: "Техника счёта",
       description: "Попытаться фантомно считать от 1 до 200 например.",
       tutorialUrl: null,
@@ -484,6 +499,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 14,
       name: "Пытаться не заметить что я уснул, но заметить проявления фазы",
       description: "С такой формулировкой пытаться уснуть",
       tutorialUrl: null,
@@ -495,6 +511,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 15,
       name: "Ярость",
       description: "Выдать крик ярости, крик пронизывающий всё.",
       tutorialUrl: null,
@@ -506,6 +523,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 40
     },
     {
+      id: 16,
       name: "Поощущать Ниточки Формулирующие текущую картинку реальности. ",
       description: "Сделать такую формулировку. Будь то Приказом или другими способами.",
       tutorialUrl: null,
@@ -517,6 +535,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 17,
       name: "Формулировка что то что я ищу уже есть только я почему-то его не вижу",
       description: "С фразой \"там (где я не вижу - за дверью и т.п.) уже Есть (тот предмет который я ищу) только я его почему-то не вижу\" - за дверью, в коробке, там куда я не смотрю",
       tutorialUrl: null,
@@ -528,6 +547,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 40
     },
     {
+      id: 18,
       name: "Фантомное Раскачивание",
       description: "Делать движения фантомными частями тела.",
       tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=570s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
@@ -539,6 +559,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 10
     },
     {
+      id: 19,
       name: "Фантомное вращение.",
       description: "Вращаться фантомным телом вокруг какой-то из своих осей - вокруг оси Х, оси У или оси Z",
       tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=146s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
@@ -550,6 +571,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 20,
       name: "Изменение позы с целью достичь Не-Параллельности телу",
       description: "Попытаться фантомным телом стать не параллельно своему физическому телу.",
       tutorialUrl: null,
@@ -561,6 +583,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 21,
       name: "Выкатывание.",
       description: "Выкатиться фантомным телом из физического.",
       tutorialUrl: null,
@@ -572,6 +595,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 70
     },
     {
+      id: 22,
       name: "Замах",
       description: "С замахом сделать движение фантомным телом.",
       tutorialUrl: null,
@@ -583,6 +607,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 30
     },
     {
+      id: 23,
       name: "Вставание",
       description: "Просто встать",
       tutorialUrl: null,
@@ -594,6 +619,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 24,
       name: "Взлёт",
       description: "Одна из самых эффективных техник на сегодняшний день",
       tutorialUrl: null,
@@ -605,6 +631,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 25,
       name: "Зацеп",
       description: "Схватить фантомной рукой фантомный предмет",
       tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=720s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
@@ -616,6 +643,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 26,
       name: "Танец",
       description: "Потанцевать фантомным телом в фантомном пространстве",
       tutorialUrl: null,
@@ -627,6 +655,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 27,
       name: "Провалиться вниз",
       description: "Стремительно упасть куда-то вниз в фантомном пространстве",
       tutorialUrl: null,
@@ -638,6 +667,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 50
     },
     {
+      id: 28,
       name: "Кувырок через голову",
       description: "Кувыркнуться фантомным телом через фантомную голову",
       tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=146s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
@@ -649,6 +679,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 30
     },
     {
+      id: 29,
       name: "Вытягивание",
       description: "Представить что меня вытягивает туда куда мне нужно.",
       tutorialUrl: null,
@@ -660,6 +691,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 50
     },
     {
+      id: 30,
       name: "Идти куда мне нужно",
       description: "Пройтись по фантомному пространству фантомными ногами.",
       tutorialUrl: null,
@@ -671,6 +703,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 20
     },
     {
+      id: 31,
       name: "Полёт",
       description: "Полетать по фантомному пространству",
       tutorialUrl: null,
@@ -682,6 +715,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 32,
       name: "Закрыть часть фантомной видимости фантомной рукой и представить что за рукой он уже есть то что мне надо. Назову это \"Божественный метод\".",
       description: "Одна из самых эффективных техник на сегодняшний день. Почти всегда даёт гиперреализм.",
       tutorialUrl: null,
@@ -693,6 +727,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 33,
       name: "Панорамно-Детализированное Наблюдение Образов ",
       description: "Пытаться увидеть панораму и детали (т.е. детали предметов на краю горизонта или видных краем глаза)",
       tutorialUrl: null,
@@ -704,6 +739,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 20
     },
     {
+      id: 34,
       name: "Наблюдение образов из центра головы",
       description: "С такой формулировкой смотреть на фантомный образ",
       tutorialUrl: null,
@@ -715,6 +751,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 35,
       name: "Визуализация",
       description: "Если образов нету - представить будто они есть",
       tutorialUrl: null,
@@ -726,6 +763,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 36,
       name: "Поднимать предметы и называть их",
       description: "Одна из самых эффективных техник на сегодняшний день",
       tutorialUrl: null,
@@ -737,6 +775,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 37,
       name: "Инерция",
       description: "Представить что меня куда-то тянет",
       tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=146s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
@@ -748,6 +787,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 38,
       name: "Представление G-Force (вестибюлярных перепадов)",
       description: "Попытаться ощутить что меня бросает будто я в истребителе лечу",
       tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=146s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
@@ -759,6 +799,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 39,
       name: "Стремительное (скоростное) падение (полёт) вниз головой закрыв глаза.",
       description: "Стремительное (скоростное) падение (полёт) вниз головой закрыв глаза.",
       tutorialUrl: null,
@@ -770,6 +811,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 40
     },
     {
+      id: 40,
       name: "Визуализация рук",
       description: "Представить свои руки, фантомно тереть их и т.п.",
       tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=720s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
@@ -781,6 +823,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 10
     },
     {
+      id: 41,
       name: "Представление любого вида перемещения используя свои фантомные руки или ноги.",
       description: "Плаванье, бег, лазанье на канате, секс",
       tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=570s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
@@ -792,6 +835,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 20
     },
     {
+      id: 42,
       name: "Прислушивание",
       description: "Услышать или прислушаться есть ли внутри головы шум или звуки какие-то.",
       tutorialUrl: null,
@@ -803,6 +847,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 43,
       name: "Представление звуков",
       description: "Если звуков нету представить какие бы они были если бы они были",
       tutorialUrl: null,
@@ -814,6 +859,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 44,
       name: "Попытки услышать как МЕНЯ кто-то зовёт по имени",
       description: "Разновидность прислушивания",
       tutorialUrl: null,
@@ -825,6 +871,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 40
     },
     {
+      id: 45,
       name: "Звать кого-то самому",
       description: "Используя фантомный голос позвать кого-то в фантомном пространстве",
       tutorialUrl: null,
@@ -836,6 +883,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 10
     },
     {
+      id: 46,
       name: "Напряжение мозга",
       description: "Попробовать напрячь свой мозг",
       tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&t=276s&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
@@ -847,6 +895,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 50
     },
     {
+      id: 47,
       name: "Представление предмета в руке которой я не вижу",
       description: "Держа руку за спиной или вне поля зрения попробовать ощутить в ней нужный предмет",
       tutorialUrl: null,
@@ -858,6 +907,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 30
     },
     {
+      id: 48,
       name: "Напряжение всего тела без напряжения мышц",
       description: "Т.е. напрячь фантомное тело а не физическое",
       tutorialUrl: "https://www.youtube.com/watch?v=pteTCezJ-zw&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0",
@@ -869,6 +919,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 30
     },
     {
+      id: 49,
       name: "Движение глаз быстро влево-вправо (физическое) ",
       description: "Реальными физическими глазами закрытыми",
       tutorialUrl: null,
@@ -880,6 +931,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 10
     },
     {
+      id: 50,
       name: "Точка во лбу",
       description: "С закрытыми глазами попытаться увидеть чуть выше линии глаз точку внутри черепа",
       tutorialUrl: null,
@@ -891,6 +943,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 51,
       name: "Гипервентеляция",
       description: "Перенасытить организм кислородом часто дыша.",
       tutorialUrl: null,
@@ -902,6 +955,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 50
     },
     {
+      id: 52,
       name: "Представление что меня кто-то вытаскивает из тела",
       description: "Какой-то человек или существо тянет меня туда куда мне надо",
       tutorialUrl: null,
@@ -913,6 +967,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 50
     },
     {
+      id: 53,
       name: "Представь что ты сейчас находишься в реальности",
       description: "Будучи в фантомном мире представить что он является реальностью",
       tutorialUrl: null,
@@ -924,6 +979,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 30
     },
     {
+      id: 54,
       name: "Представление себя разделенным (например, стоящим рядом с кроватью)",
       description: "Т.е. представлять себя фантомного в том ракурсе фантомного мира в каком нужно.",
       tutorialUrl: null,
@@ -935,6 +991,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 55,
       name: "Плацебо. Предстаь, что некоторые предметы помогают тебе достичь некоторых результатов.",
       description: "Т.е. представить например напиток углубляющий состояние фазы. Или представить предмет-углублятор.",
       tutorialUrl: null,
@@ -946,6 +1003,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 56,
       name: "Вспоминание того что не знал",
       description: "Техника попытки вспомнить что-то. Например будучи в фантомном мире попытаться вспомнить рецепт гениального и вкусного торта",
       tutorialUrl: null,
@@ -957,6 +1015,7 @@ export class AppComponent implements OnInit {
       endDesireToChange: 0
     },
     {
+      id: 57,
       name: "Вспоминание того что знал",
       description: "Если вспомнить в реале не получается можно попробовать вспомнить в фантомном мире. Например то что забылось ещё 20 лет назад.",
       tutorialUrl: null,

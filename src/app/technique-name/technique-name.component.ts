@@ -7,7 +7,6 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class TechniqueNameComponent implements OnInit {
   @Input() technique: any
-  @Input() currentTechniqueIndex: any
   @Input() selectedTechniqueIndex: any
   @Output() onSelectedTechniqueChange = new EventEmitter<number>();
 
@@ -17,11 +16,11 @@ export class TechniqueNameComponent implements OnInit {
   }
 
   setSelectedTechnique() {
-    this.onSelectedTechniqueChange.emit(this.currentTechniqueIndex)
+    this.onSelectedTechniqueChange.emit(this.technique.id)
   }
 
   isChecked(): boolean {
-    return this.selectedTechniqueIndex == this.currentTechniqueIndex
+    return this.selectedTechniqueIndex == this.technique.id
   }
 
   differenceBetweenDetalizations() {
