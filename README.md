@@ -29,7 +29,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 # Deploy Production:
 
-git subtree push --prefix dist origin gh-pages
+git subtree push --prefix dist/phase-website origin gh-pages
 
 ## Running unit tests
 
