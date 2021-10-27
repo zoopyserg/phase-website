@@ -72,6 +72,46 @@ export class AppComponent implements OnInit {
 
   headerTabs: HeaderTab[] = [
     {
+      name: "Фаза",
+      description: "Состояние моделирования мозгом реальности и выдавания этой картинки сознанию за действительное",
+      backgroundClass: "hero-attraction-law"
+    },
+    {
+      name: "Гиперреальность",
+      description: "Крайний пик фазного состояния при котором насыщенность картинки выше чем в реальном мире и возможны прозрения и общение напрямую со своим мозгом.",
+      backgroundClass: "hero-trance"
+    },
+    {
+      name: "Медитация",
+      description: "Условная искажённая попытка разными малоэффективными методами попасть в \"фантомный мир\" или увидеть в нём прозрение",
+      backgroundClass: "hero-meditation"
+    },
+    {
+      name: "Осознанные сноведения",
+      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир.",
+      backgroundClass: "hero-lucid-dreams"
+    },
+    {
+      name: "Убеждения что мир что-то притягивает в нашу жизнь",
+      description: "Приписывание смешать способность мира притягивать к проблемам их решения со способностью мозга краем глаза замечать объекты которые ищет подсознание",
+      backgroundClass: "hero-attraction-law"
+    },
+    {
+      name: "Бог",
+      description: "Собирательный образ всех вещей которые люди видели входя в созерцание \"фантомного\" мира",
+      backgroundClass: "hero-god"
+    },
+    {
+      name: "Душа",
+      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир.",
+      backgroundClass: "hero-soul"
+    },
+    {
+      name: "Выход души из тела",
+      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир.",
+      backgroundClass: "hero-soul-exiting-body"
+    },
+    {
       name: "Rebreathing",
       description: "Занятие гипервентеляцией (частым дыханием) с целью вызвать галлюцинации и в них увидеть прозрения.",
       backgroundClass: "hero-rebreathing"
@@ -100,11 +140,6 @@ export class AppComponent implements OnInit {
       name: "Аффекты",
       description: "Состояние в котором человек совершает некоторые действия, возможно осознаёт их, но осознанно на них не влияет",
       backgroundClass: "hero-affect"
-    },
-    {
-      name: "Бог",
-      description: "Собирательный образ всех вещей которые люди видели входя в созерцание \"фантомного\" мира",
-      backgroundClass: "hero-god"
     },
     {
       name: "Брейнсторм",
@@ -142,11 +177,6 @@ export class AppComponent implements OnInit {
       backgroundClass: "hero-entering-other-dimention"
     },
     {
-      name: "Выход души из тела",
-      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир.",
-      backgroundClass: "hero-soul-exiting-body"
-    },
-    {
       name: "Галлюцинации",
       description: "Условное название ощущений, в которых человек частично осознаёт одновременно и реальный и \"фантомный\" мир",
       backgroundClass: "hero-hallucination"
@@ -165,11 +195,6 @@ export class AppComponent implements OnInit {
       name: "Диссоциативное состояние",
       description: "Условное название ощущений, в которых человек частично осознаёт одновременно и реальный и \"фантомный\" мир",
       backgroundClass: "hero-dissociative-state"
-    },
-    {
-      name: "Душа",
-      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир.",
-      backgroundClass: "hero-soul"
     },
     {
       name: "Знаки свыше",
@@ -217,19 +242,9 @@ export class AppComponent implements OnInit {
       backgroundClass: "hero-mass-histeria"
     },
     {
-      name: "Медитация",
-      description: "Условная искажённая попытка разными малоэффективными методами попасть в \"фантомный мир\" или увидеть в нём прозрение",
-      backgroundClass: "hero-meditation"
-    },
-    {
       name: "Мистика",
       description: "Собирательный ряд течений деятельности человека, направленный на то чтоб помимо темы \"фантомного мира\" впарить людям то или иное непрактичное объяснение",
       backgroundClass: "hero-mistique"
-    },
-    {
-      name: "Осознанные сноведения",
-      description: "Условное название ощущений, в которых не ощущаешь своё тело но ощущаешь \"фантомный\" мир.",
-      backgroundClass: "hero-lucid-dreams"
     },
     {
       name: "Параллельный мир",
@@ -295,11 +310,6 @@ export class AppComponent implements OnInit {
       name: "Наркотический Трип",
       description: "Условное название ощущений, в которых человек частично осознаёт одновременно и реальный и \"фантомный\" мир",
       backgroundClass: "hero-narcotic-trip"
-    },
-    {
-      name: "Убеждения что мир что-то притягивает в нашу жизнь",
-      description: "Приписывание смешать способность мира притягивать к проблемам их решения со способностью мозга краем глаза замечать объекты которые ищет подсознание",
-      backgroundClass: "hero-attraction-law"
     },
     {
       name: "Уход от реальности",

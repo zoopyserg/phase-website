@@ -1,10 +1,23 @@
 # PhaseWebsite
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
+A website for Phase fenomenon.
+
+## Todo:
+- возможность сортировки по значениям техник
+- прыгающий хедер
+- переводы (локали)
+- таскание точки на графике
+- тот факт что повышение желания изменить выкидывает из фазы пока никак не показан
+- глянуть как оно выглядит на телефоне
+- движение зелёной точки по графику чуть дёрганное
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. 
+
+Navigate to `http://localhost:4200/`. 
+
+The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
