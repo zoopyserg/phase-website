@@ -17,6 +17,7 @@ export class TechniqueNameComponent implements OnInit {
 
   setSelectedTechnique() {
     this.onSelectedTechniqueChange.emit(this.technique.id)
+    this.scrollToPhoto()
   }
 
   isChecked(): boolean {
@@ -95,5 +96,12 @@ export class TechniqueNameComponent implements OnInit {
 
   totalDifferenceString() {
     return this.totalDifference() + "%"
+  }
+
+  scrollToPhoto() {
+    let el = document.getElementById("selectedImageDemo");
+    if (el) {
+      el.scrollIntoView();
+    }
   }
 }
