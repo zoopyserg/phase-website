@@ -2,6 +2,8 @@
 
 A website for Phase fenomenon.
 
+https://phasemeditationtrainer.xyz/
+
 ## Todo:
 - возможность сортировки по значениям техник
 - прыгающий хедер
