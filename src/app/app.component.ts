@@ -38,8 +38,8 @@ export interface Technique {
 export class AppComponent implements OnInit {
   title = 'phase-website';
   selectedTechniqueIndex: number = 0
-  detalizationPropertyValue: number = 50;
-  panoramityPropertyValue: number = 50;
+  detalizationPropertyValue: number = 41;
+  panoramityPropertyValue: number = 21;
   desireToChangePropertyValue: number = 50;
   selectedImageIndex: number = 0
   endlessTimerID: any;
@@ -55,8 +55,8 @@ export class AppComponent implements OnInit {
   endlessHeaderTabLoopDuration : number = 7000;
 
 
-  detalizationProperty: PhaseProperty = {name: "Детализация", value: 50}
-  panoramityProperty: PhaseProperty = {name: "Панорамность", value: 50}
+  detalizationProperty: PhaseProperty = {name: "Детализация", value: 41}
+  panoramityProperty: PhaseProperty = {name: "Панорамность", value: 21}
   desireToChangeProperty: PhaseProperty = {name: "Желание Изменить Картинку", value: 50}
 
   imageNames: ImageName[] = [
