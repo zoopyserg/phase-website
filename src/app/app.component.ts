@@ -29,6 +29,11 @@ export interface Technique {
   endDesireToChange: number
 }
 
+export interface Video {
+  title: string
+  url: string
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -58,6 +63,25 @@ export class AppComponent implements OnInit {
   detalizationProperty: PhaseProperty = {name: "Детализация", value: 41}
   panoramityProperty: PhaseProperty = {name: "Панорамность", value: 21}
   desireToChangeProperty: PhaseProperty = {name: "Желание Изменить Картинку", value: 50}
+
+  videos: Video[] = [
+    {
+      title: "Тренинг 1. Что такое фаза. Гиперфаза.",
+      url: "https://www.youtube.com/embed/kt-2WmrSsnM"
+    },
+    {
+      title: "Тренинг 2. Гиперфаза На Стероидах. Приказ ниточек.",
+      url: "https://www.youtube.com/embed/nS-WdjKk_B8"
+    },
+    {
+      title: "Тренинг 3: Лучшая Техника. Техника закрыванием рукой",
+      url: "https://www.youtube.com/embed/t-L73iuD7Dg"
+    },
+    {
+      title: "Тренинг 4: Как улучшить жизнь фазой.",
+      url: "https://www.youtube.com/embed/-jHtcSDA1xA"
+    },
+  ]
 
   imageNames: ImageName[] = [
     {name: "Лес", filename: "forest.jpg"},
