@@ -10,8 +10,34 @@
       ></app-header>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12 col-lg-7">
+          <div class="col-12 col-lg-6">
             <app-trainingvideosection></app-trainingvideosection>
+          </div>
+          <div class="col-12 col-lg-6">
+            <app-trainingvideosection></app-trainingvideosection>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <app-trainingvideosection></app-trainingvideosection>
+          </div>
+          <div class="col-12 col-lg-6">
+            <app-trainingvideosection></app-trainingvideosection>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-7">
+            <app-selectedimagesection
+              [detalizationProperty]="detalizationProperty"
+              [panoramityProperty]="panoramityProperty"
+              [desireToChangeProperty]="desireToChangeProperty"
+              [imageNames]="imageNames"
+              [selectedImageIndex]="selectedImageIndex"
+              [techniques]="techniques"
+              [selectedTechniqueIndex]="selectedTechniqueIndex"
+              [detalizationPropertyValue]="detalizationPropertyValue"
+              [panoramityPropertyValue]="panoramityPropertyValue"
+            ></app-selectedimagesection>
           </div>
           <div class="col-lg-5">
             <app-chartsection
@@ -28,25 +54,14 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-7 col-xl-8">
-            <app-selectedimagesection
-              [detalizationProperty]="detalizationProperty"
-              [panoramityProperty]="panoramityProperty"
-              [desireToChangeProperty]="desireToChangeProperty"
-              [imageNames]="imageNames"
-              [selectedImageIndex]="selectedImageIndex"
-              [techniques]="techniques"
-              [selectedTechniqueIndex]="selectedTechniqueIndex"
-              [detalizationPropertyValue]="detalizationPropertyValue"
-              [panoramityPropertyValue]="panoramityPropertyValue"
-            ></app-selectedimagesection>
-          </div>
-          <div class="col-lg-5 col-xl-4">
+          <div class="col-lg-6">
             <app-selectpicturesection
               [imageNames]="imageNames"
               [selectedImageIndex]="selectedImageIndex"
               (onSelectedImageChange)="setSelectedImage($event)"
             ></app-selectpicturesection>
+          </div>
+          <div class="col-lg-6">
             <app-slidepropertiessection
               [detalizationProperty]="detalizationProperty"
               [panoramityProperty]="panoramityProperty"
