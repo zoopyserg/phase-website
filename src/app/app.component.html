@@ -52,17 +52,15 @@
             ></app-selectedimagesection>
           </div>
           <div class="col-lg-5">
-            <app-chartsection
+            <app-slidepropertiessection
               [detalizationProperty]="detalizationProperty"
               [panoramityProperty]="panoramityProperty"
               [desireToChangeProperty]="desireToChangeProperty"
-              [imageNames]="imageNames"
-              [selectedImageIndex]="selectedImageIndex"
-              [techniques]="techniques"
               [selectedTechniqueIndex]="selectedTechniqueIndex"
-              [detalizationPropertyValue]="detalizationPropertyValue"
-              [panoramityPropertyValue]="panoramityPropertyValue"
-            ></app-chartsection>
+              (onDetalizationPropertyChanged)="setDetalizationValue($event)"
+              (onPanoramityPropertyChanged)="setPanoramityValue($event)"
+              (onDesireToChangePropertyChanged)="setDesireToChangeValue($event)"
+            ></app-slidepropertiessection>
           </div>
         </div>
         <div class="row">
@@ -74,15 +72,17 @@
             ></app-selectpicturesection>
           </div>
           <div class="col-lg-6">
-            <app-slidepropertiessection
+            <app-chartsection
               [detalizationProperty]="detalizationProperty"
               [panoramityProperty]="panoramityProperty"
               [desireToChangeProperty]="desireToChangeProperty"
+              [imageNames]="imageNames"
+              [selectedImageIndex]="selectedImageIndex"
+              [techniques]="techniques"
               [selectedTechniqueIndex]="selectedTechniqueIndex"
-              (onDetalizationPropertyChanged)="setDetalizationValue($event)"
-              (onPanoramityPropertyChanged)="setPanoramityValue($event)"
-              (onDesireToChangePropertyChanged)="setDesireToChangeValue($event)"
-            ></app-slidepropertiessection>
+              [detalizationPropertyValue]="detalizationPropertyValue"
+              [panoramityPropertyValue]="panoramityPropertyValue"
+            ></app-chartsection>
           </div>
         </div>
         <div class="row">
