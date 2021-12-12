@@ -74,12 +74,16 @@ export class AppComponent implements OnInit {
       url: "https://www.youtube.com/embed/nS-WdjKk_B8"
     },
     {
-      title: "Тренинг 3: Лучшая Техника. Техника закрыванием рукой",
+      title: "Тренинг 3: Лучшая Техника Преобразования. Техника закрыванием рукой",
       url: "https://www.youtube.com/embed/t-L73iuD7Dg"
     },
     {
       title: "Тренинг 4: Как улучшить жизнь фазой.",
       url: "https://www.youtube.com/embed/-jHtcSDA1xA"
+    },
+    {
+      title: "Тренинг 5: Лучшая техника Входа в Фазу",
+      url: "https://www.youtube.com/embed/GD6hGdzraOs"
     },
   ]
 
