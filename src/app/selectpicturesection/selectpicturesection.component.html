@@ -1,6 +1,14 @@
 <div class="card shadow mb-4">
-  <div class="card-header py-3">
+  <div class="card-header d-flex justify-content-between align-items-center">
     <h6 class="text-primary fw-bold m-0">Выбрать Картинку</h6>
+    <div class="dropdown no-arrow">
+      <button class="btn btn-link btn-sm dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button">
+        <i class="fas fa-ellipsis-v text-gray-400"></i>
+      </button>
+      <div class="dropdown-menu shadow dropdown-menu-end animated--fade-in">
+        <a class="dropdown-item" href="#page-top">&nbsp;Записаться на курс</a>
+      </div>
+    </div>
   </div>
   <ul class="list-group list-group-flush">
     <app-image-name *ngFor="let imageName of imageNames; let i = index" [imageName]="imageName" [selectedImageIndex]="selectedImageIndex" [currentImageIndex]="i" (onSelectedImageChange)="setSelectedImageChange($event)"></app-image-name>

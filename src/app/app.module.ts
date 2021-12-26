@@ -17,6 +17,10 @@ import { TechniqueNameComponent } from './technique-name/technique-name.componen
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 import { HeaderTabComponent } from './header-tab/header-tab.component';
 import { TrainingComponent } from './training/training.component';
+import { InstructionssectionComponent } from "./instructionssection/instructionssection.component";
+import {
+  HyperphaseinstructionssectionComponent
+} from "./hyperphaseinstructionssection/hyperphaseinstructionssection.component";
 
 @NgModule({
   declarations: [
@@ -33,7 +37,9 @@ import { TrainingComponent } from './training/training.component';
     ImageNameComponent,
     TechniqueNameComponent,
     HeaderTabComponent,
-    TrainingComponent
+    TrainingComponent,
+    InstructionssectionComponent,
+    HyperphaseinstructionssectionComponent
   ],
   imports: [
     BrowserModule,
