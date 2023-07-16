@@ -15,9 +15,9 @@ https://phasemeditationtrainer.xyz/
 
 ## Development server
 
-Run `ng serve` for a dev server. 
+Run `ng serve` for a dev server.
 
-Navigate to `http://localhost:4200/`. 
+Navigate to `http://localhost:4200/`.
 
 The app will automatically reload if you change any of the source files.
 
@@ -27,7 +27,9 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build --prod` to build the project.
+(it will build to docs folder which is default for Github)
+The build artifacts will be stored in the `dist/` directory.
 
 # Deploy Production:
 
