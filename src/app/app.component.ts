@@ -7,6 +7,7 @@ export interface PhaseProperty {
 
 export interface HeaderTab {
   name: string
+  name2: string
   description: string
   backgroundClass: string
 }
@@ -115,7 +116,8 @@ export class AppComponent implements OnInit {
     //   backgroundClass: "hero-meditation"
     // },
     {
-      name: "Лучшая Школа Осознанных Снов в Украине",
+      name: "Школа Осознанных Снов \"Гиперфаза\"",
+      name2: "Лучшая Школа Осознанных Снов в Украине",
       description: "За основу взята теория М. Радуги, но мы пошли дальше в аналитике состояния, и углубились в контроль над ключевыми факторами влияющими на самый лучший результат.",
       backgroundClass: "hero-lucid-dreams"
     }
