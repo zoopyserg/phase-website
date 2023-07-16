@@ -3,9 +3,9 @@
     <div class="carousel-inner">
       <app-header-tab *ngFor="let tab of headerTabs; let i = index" [tab]="tab" [isActive]="i == selectedHeaderTabIndex"></app-header-tab>
     </div>
-    <div>
+    <!-- div>
       <a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev" (click)="setSelectedHeaderTab(previousTabIndex)"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a>
       <a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next" (click)="setSelectedHeaderTab(nextTabIndex)"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a>
-    </div>
+    </div-->
   </div>
 </section>
