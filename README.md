@@ -2,7 +2,7 @@
 
 A website for Phase fenomenon.
 
-https://phasemeditationtrainer.xyz/
+https://luciddreams.wiki/
 
 ## Todo:
 - возможность сортировки по значениям техник
